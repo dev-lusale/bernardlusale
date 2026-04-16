@@ -245,7 +245,29 @@ h2 {
    PROJECTS
 ======================== */
 
+/* ========================
+   PROJECTS
+======================== */
+
 #projects {
+
+    padding: 90px 60px;
+
+}
+
+/* Title stays centered */
+
+#projects h2 {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+/* Grid only for cards */
+
+.project-grid {
 
     display: grid;
 
@@ -253,7 +275,14 @@ h2 {
         repeat(auto-fit, minmax(280px, 1fr));
 
     gap: 30px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
 }
+
+/* Project Cards */
 
 .project-card {
 
@@ -271,34 +300,19 @@ h2 {
 }
 
 .project-card:hover {
+
     transform: translateY(-10px);
+
     border-color: #22d3ee;
+
 }
 
 .project-card img {
+
     width: 100%;
+
     border-radius: 12px;
-}
 
-.project-card h3 {
-    margin-top: 15px;
-}
-
-.project-card p {
-    margin-top: 10px;
-    color: #94a3b8;
-}
-
-.project-card a {
-    display: inline-block;
-
-    margin-top: 12px;
-
-    text-decoration: none;
-
-    color: #22d3ee;
-
-    font-weight: bold;
 }
 
 .education {
