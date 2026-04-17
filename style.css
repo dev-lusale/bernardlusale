@@ -637,3 +637,11 @@ form button:hover {
         text-align: center;
     }
 }
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: #0f172a;
+    border-radius: 50%;
+}
