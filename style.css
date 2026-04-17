@@ -549,113 +549,103 @@ form button:hover {
     transform: scale(1.05);
 }
 
-/* Social */
 
-.social-links {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-links a {
-
-    margin: 0 12px;
-
-    color: #22d3ee;
-
-    text-decoration: none;
-
-    font-weight: 500;
-}
-
-@media(max-width:768px) {
-    /* Mobile Social Icons */
-
-    .social-links img {
-        width: 32px;
-        height: 32px;
-        padding: 6px;
-    }
-
-    .social-links {
-        gap: 10px;
-    }
-
-
-    /* ========================
+/* ========================
    SCROLL BUTTON
 ======================== */
 
-    #scrollTop {
+#scrollTop {
 
-        position: fixed;
+    position: fixed;
 
-        bottom: 25px;
+    bottom: 25px;
 
-        right: 25px;
+    right: 25px;
 
-        padding: 12px 15px;
+    padding: 12px 15px;
 
-        border-radius: 50%;
+    border-radius: 50%;
 
-        border: none;
+    border: none;
 
-        background: #22d3ee;
+    background: #22d3ee;
 
-        color: black;
+    color: black;
 
-        font-size: 18px;
+    font-size: 18px;
 
-        cursor: pointer;
+    cursor: pointer;
+
+    display: none;
+}
+
+/* ========================
+   MOBILE
+======================== */
+
+@media(max-width:768px) {
+
+    nav ul {
+
+        position: absolute;
+
+        right: 0;
+
+        top: 70px;
+
+        flex-direction: column;
+
+        background: #020617;
+
+        width: 200px;
 
         display: none;
     }
 
-    /* ========================
-   MOBILE
-======================== */
-
-    @media(max-width:768px) {
-
-        nav ul {
-
-            position: absolute;
-
-            right: 0;
-
-            top: 70px;
-
-            flex-direction: column;
-
-            background: #020617;
-
-            width: 200px;
-
-            display: none;
-        }
-
-        nav ul.show {
-            display: flex;
-        }
-
-        .hamburger {
-            display: block;
-        }
-
-        section {
-            padding: 70px 25px;
-        }
-
-        .counters {
-            flex-direction: column;
-            gap: 15px;
-            text-align: center;
-        }
+    nav ul.show {
+        display: flex;
     }
 
-    .social-links img {
-        width: 40px;
-        height: 40px;
-        padding: 8px;
-        background: #0f172a;
-        border-radius: 50%;
+    .hamburger {
+        display: block;
     }
+
+    section {
+        padding: 70px 25px;
+    }
+
+    .counters {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Desktop Icons */
+
+/* Center Social Icons Container */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    background: #0f172a;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.15);
+}
