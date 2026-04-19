@@ -832,3 +832,75 @@ form button:hover {
     font-size: 0.95rem;
     color: #eee;
 }
+
+#events {
+    padding: 60px 20px;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+}
+
+#events h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #ff4b2b;
+}
+
+#events p {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Events grid */
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Event card */
+.event-card {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.event-card img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 15px;
+}
+
+.event-details h3 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.event-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #ff4b2b;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    font-size: 0.95rem;
+    color: #eee;
+}
