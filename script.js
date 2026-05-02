@@ -192,4 +192,10 @@ document.addEventListener("DOMContentLoaded", () => {
             cursor.style.top = e.clientY + "px";
         });
     }
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
 });
