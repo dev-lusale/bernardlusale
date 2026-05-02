@@ -839,44 +839,56 @@ form button:hover {
 
 @media (max-width: 768px) {
 
-    /* HERO LAYOUT */
+    /* NAV */
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #020617;
+        width: 200px;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    /* HERO */
     .hero-container {
         flex-direction: column;
         height: auto;
         padding: 40px 20px;
         text-align: center;
-        gap: 30px;
-        /* controls spacing */
     }
 
-    /* TEXT */
     .hero-left h1 {
         font-size: 2.2rem;
     }
 
-    /* IMAGE CONTAINER */
-    .hero-right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-
-    /* IMAGE (FIXED SIZE, NOT % BASED) */
     .hero-img {
-        width: 220px;
-        /* 🔥 fixed size = stable UI */
+        width: 70%;
+        max-width: 220px;
         height: auto;
-        border-radius: 20px;
+        margin: 25px auto 0;
+        display: block;
+        border-radius: 16px;
     }
 
-    /* BACKGROUND CIRCLE (SMALLER + CENTERED) */
     .hero-circle {
-        width: 240px;
-        height: 240px;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 260px;
+        height: 260px;
+    }
+
+    /* EVENTS */
+    .event-card img {
+        height: auto;
+        aspect-ratio: 16/9;
     }
 }
 
