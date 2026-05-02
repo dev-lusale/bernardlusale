@@ -867,9 +867,6 @@ form button:hover {
         width: 260px;
         height: 260px;
     }
-}
-
-@media (max-width: 768px) {
 
     .project-grid,
     .events-grid,
