@@ -850,7 +850,7 @@ form button:hover {
     }
 
     .event-card img {
-        height: auto;
+        height: 200px;
         aspect-ratio: 16/9;
     }
 
