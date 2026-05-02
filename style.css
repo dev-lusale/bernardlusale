@@ -839,7 +839,6 @@ form button:hover {
 
 @media (max-width: 768px) {
 
-    /* HERO */
     #hero {
         flex-direction: column;
         text-align: center;
@@ -869,28 +868,6 @@ form button:hover {
         height: 260px;
     }
 
-    /* IMPORTANT FIX: KEEP FLEX CLEAN */
-    .project-grid,
-    .events-grid,
-    .services-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .project-card,
-    .event-card,
-    .service-card {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    /* EVENTS IMAGE FIX */
-    .event-card img {
-        height: 200px;
-        object-fit: cover;
-    }
 }
 
 
