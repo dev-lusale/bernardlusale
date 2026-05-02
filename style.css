@@ -828,37 +828,26 @@ form button:hover {
 ======================== */
 
 @media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        /* stack text and image vertically */
-        align-items: center;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .hero-left {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
     .hero-img {
         width: 85%;
-        /* scale to viewport width */
-        max-width: 260px;
+        /* scales to viewport width */
+        max-width: 240px;
         /* cap size for small screens */
         height: auto;
         /* keep proportions */
         border-radius: 12px;
         /* softer corners */
-        margin: 0 auto;
+        margin: 20px auto;
         /* center horizontally */
         display: block;
+        /* ensure proper centering */
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
         /* professional polish */
     }
 
     .hero-circle {
         width: 200px;
+        /* shrink background circle */
         height: 200px;
         top: 10px;
         left: 50%;
@@ -869,15 +858,14 @@ form button:hover {
     .hero-left h1 {
         font-size: 2rem;
         /* scale down heading */
+        text-align: center;
     }
 
     .hero-left p {
-        font-size: 1rem;
-        max-width: 90%;
+        text-align: center;
         margin: 0 auto;
     }
 }
-
 
 
 /* Desktop Icons */
