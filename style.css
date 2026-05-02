@@ -851,7 +851,8 @@ form button:hover {
 
     .event-card img {
         height: 200px;
-        aspect-ratio: 16/9;
+
+        object-fit: cover;
     }
 
     .event-details {
