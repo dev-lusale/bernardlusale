@@ -19,11 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
             navMenu.classList.toggle("show");
+            // Optional: toggle icon between ☰ and ✖
+            hamburger.innerHTML = navMenu.classList.contains("show") ? "&times;" : "&#9776;";
         });
 
         navLinks.forEach(link => {
             link.addEventListener("click", () => {
                 navMenu.classList.remove("show");
+                hamburger.innerHTML = "&#9776;";
             });
         });
     }
@@ -87,13 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
         if (!navbar) return;
         navbar.style.boxShadow =
-            window.scrollY > 50
-                ? "0 4px 12px rgba(0,0,0,0.3)"
-                : "none";
+            window.scrollY > 50 ? "0 4px 12px rgba(0,0,0,0.3)" : "none";
     });
 
     // ==============================
-    // INTERSECTION OBSERVER (OPTIMIZED)
+    // INTERSECTION OBSERVER
     // ==============================
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -116,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const top = window.scrollY;
             const offset = section.offsetTop - 150;
             const height = section.offsetHeight;
-
             if (top >= offset && top < offset + height) {
                 current = section.getAttribute("id");
             }
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ==============================
-    // HERO PARALLAX MOUSE EFFECT
+    // HERO PARALLAX
     // ==============================
     if (heroCircle) {
         window.addEventListener("mousemove", (e) => {
