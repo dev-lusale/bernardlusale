@@ -839,27 +839,20 @@ form button:hover {
 
 @media (max-width: 768px) {
 
-    .stack-grid {
+    .project-grid,
+    .events-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .stack-card {
+    .project-card,
+    .event-card,
+    .service-card {
         width: 100%;
-        max-width: 340px;
-    }
-
-    .icon-grid {
-        gap: 10px;
-    }
-
-    .icon-item {
-        width: 60px;
-    }
-
-    .icon-item img {
-        width: 40px;
-        height: 40px;
+        max-width: 350px;
     }
 }
 
