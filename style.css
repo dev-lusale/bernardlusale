@@ -837,25 +837,36 @@ form button:hover {
    MOBILE
 ======================== */
 
-@media (max-width: 768px) {
+@@media (max-width: 768px) {
 
-    .project-grid,
-    .events-grid,
-    .services-grid {
-        grid-template-columns: 1fr;
-        display: flex;
+    .events-grid {
         flex-direction: column;
         align-items: center;
     }
 
-    .project-card,
-    .event-card,
-    .service-card {
+    .event-card {
         width: 100%;
         max-width: 350px;
     }
-}
 
+    .event-card img {
+        height: 200px;
+        /* IMPORTANT FIX */
+        object-fit: cover;
+    }
+
+    .event-details {
+        padding: 12px;
+    }
+
+    .event-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .event-details p {
+        font-size: 0.9rem;
+    }
+}
 
 
 img {
