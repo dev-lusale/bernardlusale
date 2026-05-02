@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburger.addEventListener("click", () => {
             navMenu.classList.toggle("show");
             hamburger.innerHTML = navMenu.classList.contains("show") ? "&times;" : "&#9776;";
+            // position dropdown just below the navbar
+            if (navMenu.classList.contains("show")) {
+                navMenu.style.top = navbar.offsetHeight + "px";
+            }
         });
 
         navLinks.forEach(link => {
