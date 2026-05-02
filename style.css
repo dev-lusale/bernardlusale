@@ -829,66 +829,56 @@ form button:hover {
 
 /* MOBILE FIXES */
 @media (max-width: 768px) {
-
-    /* Hamburger */
-    .hamburger {
-        display: block !important;
-        cursor: pointer;
-        font-size: 28px;
-        z-index: 1001;
-    }
-
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #020617;
-        width: 220px;
+    .hero-container {
         flex-direction: column;
-        padding: 15px;
-        z-index: 1000;
-        transition: transform 0.3s ease;
-        transform: translateX(100%);
-    }
-
-    nav ul.show {
-        display: flex;
-        transform: translateX(0);
-    }
-
-    nav ul li {
-        margin: 12px 0;
-    }
-
-    /* Events */
-    .events-grid {
-        flex-direction: column;
+        /* stack text and image vertically */
         align-items: center;
+        padding: 40px 20px;
+        text-align: center;
     }
 
-    .event-card {
-        width: 95%;
-        max-width: 340px;
+    .hero-left {
+        max-width: 100%;
         margin-bottom: 20px;
     }
 
-    .event-card img {
-        width: 100%;
+    .hero-img {
+        width: 85%;
+        /* scale to viewport width */
+        max-width: 240px;
+        /* cap size for small screens */
         height: auto;
-        /* responsive */
-        aspect-ratio: 16/9;
         /* keep proportions */
-        object-fit: cover;
+        border-radius: 12px;
+        /* softer corners */
+        margin: 0 auto;
+        /* center horizontally */
+        display: block;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        /* professional polish */
+    }
+
+    .hero-circle {
+        width: 200px;
+        height: 200px;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* center behind image */
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+        /* scale down heading */
+    }
+
+    .hero-left p {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
     }
 }
 
-/* Disable scroll snap on mobile */
-@media (max-width: 768px) {
-    html {
-        scroll-snap-type: none;
-    }
-}
 
 
 
