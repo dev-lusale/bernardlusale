@@ -1,13 +1,3 @@
-:root {
-    --bg: #0f172a;
-    --bg-dark: #020617;
-    --card: rgba(255, 255, 255, 0.05);
-    --text: #e5e7eb;
-    --muted: #94a3b8;
-    --primary: #facc15;
-    --secondary: #22d3ee;
-}
-
 * {
     margin: 0;
     padding: 0;

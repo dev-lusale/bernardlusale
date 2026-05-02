@@ -190,12 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("mousemove", (e) => {
             cursor.style.left = e.clientX + "px";
             cursor.style.top = e.clientY + "px";
-        });
-    }
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
+        }
 
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
     });
-});
