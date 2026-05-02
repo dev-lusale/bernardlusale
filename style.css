@@ -828,37 +828,24 @@ form button:hover {
 ======================== */
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        z-index: 1001;
-        /* keep it clickable above everything */
-    }
-
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #020617;
-        width: 220px;
+    .events-grid {
         flex-direction: column;
-        padding: 15px;
-        z-index: 1000;
-        /* ensure menu sits above hero */
-        transition: transform 0.3s ease;
-        transform: translateX(100%);
-        /* hidden off-screen */
+        align-items: center;
     }
 
-    nav ul.show {
-        display: flex;
-        transform: translateX(0);
-        /* slide in */
+    .event-card {
+        width: 90%;
+        /* make cards responsive */
+        max-width: 320px;
     }
 
-    nav ul li {
-        margin: 12px 0;
+    .event-card img {
+        width: 100%;
+        height: auto;
+        /* let it scale naturally */
+        aspect-ratio: 16/9;
+        /* keeps nice proportions */
+        object-fit: cover;
     }
 }
 
