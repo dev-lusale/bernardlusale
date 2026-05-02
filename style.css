@@ -872,14 +872,13 @@ form button:hover {
     }
 
     .hero-img {
-        width: 100%;
-        max-width: 380px;
-        height: auto;
+        width: 90%;
+        max-width: 300px;
     }
 
     .hero-circle {
-        width: 50px;
-        height: 50px;
+        width: 260px;
+        height: 260px;
     }
 
     /* EVENTS */
