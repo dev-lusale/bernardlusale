@@ -837,7 +837,7 @@ form button:hover {
    MOBILE
 ======================== */
 
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
 
     .events-grid {
         flex-direction: column;
