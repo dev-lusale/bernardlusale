@@ -828,36 +828,33 @@ form button:hover {
 ======================== */
 
 @media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 95%;
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+
     .events-grid {
         flex-direction: column;
-        /* stack vertically */
         align-items: center;
-        /* center cards */
     }
 
     .event-card {
         width: 95%;
-        /* responsive width */
         max-width: 340px;
-        /* prevent overflow */
         margin-bottom: 20px;
-        /* spacing between cards */
     }
 
     .event-card img {
         width: 100%;
-        /* scale to card width */
         height: auto;
-        /* let browser calculate height */
         aspect-ratio: 16/9;
-        /* keep nice proportions */
         object-fit: cover;
-        /* crop neatly */
-    }
-
-    .event-details {
-        padding: 12px;
-        text-align: left;
     }
 }
 
