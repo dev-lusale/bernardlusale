@@ -168,3 +168,54 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+    const scrollBtn = document.getElementById("scrollTop");
+    const navbar = document.getElementById("navbar");
+    const cursor = document.querySelector(".cursor");
+    const heroCircle = document.querySelector(".hero-circle");
+    const navLinks = document.querySelectorAll("nav a");
+
+    // ==============================
+    // HAMBURGER MENU
+    // ==============================
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+            hamburger.innerHTML = navMenu.classList.contains("show") ? "&times;" : "&#9776;";
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("show");
+                hamburger.innerHTML = "&#9776;";
+            });
+        });
+    }
+
+    // ==============================
+    // INTERSECTION OBSERVER (Reveal Animations)
+    // ==============================
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".reveal, .reveal-text").forEach(el => {
+        observer.observe(el);
+    });
+
+    // ==============================
+    // CUSTOM CURSOR
+    // ==============================
+    if (cursor) {
+        window.addEventListener("mousemove", (e) => {
+            cursor.style.left = e.clientX + "px";
+            cursor.style.top = e.clientY + "px";
+        });
+    }
+});

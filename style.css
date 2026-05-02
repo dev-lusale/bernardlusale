@@ -827,12 +827,13 @@ form button:hover {
    MOBILE
 ======================== */
 
+/* MOBILE FIXES */
 @media (max-width: 768px) {
 
-    /* Hamburger fix */
+    /* Hamburger */
     .hamburger {
         display: block !important;
-        /* force it to show */
+        /* force visible */
         cursor: pointer;
         font-size: 28px;
         z-index: 1001;
@@ -861,7 +862,55 @@ form button:hover {
         margin: 12px 0;
     }
 
-    /* Events fix */
+    /* Hero image */
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 85%;
+        max-width: 240px;
+        height: auto;
+        border-radius: 12px;
+        margin: 20px auto;
+        display: block;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-circle {
+        width: 200px;
+        height: 200px;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+    }
+
+    .hero-left p {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Services */
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 95%;
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+
+    /* Events */
     .events-grid {
         flex-direction: column;
         align-items: center;
@@ -880,6 +929,13 @@ form button:hover {
         aspect-ratio: 16/9;
         /* keep proportions */
         object-fit: cover;
+    }
+}
+
+/* Disable scroll snap for mobile to prevent skipping sections */
+@media (max-width: 768px) {
+    html {
+        scroll-snap-type: none;
     }
 }
 
