@@ -830,24 +830,37 @@ form button:hover {
 @media (max-width: 768px) {
     .events-grid {
         flex-direction: column;
+        /* stack vertically */
         align-items: center;
+        /* center cards */
     }
 
     .event-card {
-        width: 90%;
-        /* make cards responsive */
-        max-width: 320px;
+        width: 95%;
+        /* responsive width */
+        max-width: 340px;
+        /* prevent overflow */
+        margin-bottom: 20px;
+        /* spacing between cards */
     }
 
     .event-card img {
         width: 100%;
+        /* scale to card width */
         height: auto;
-        /* let it scale naturally */
+        /* let browser calculate height */
         aspect-ratio: 16/9;
-        /* keeps nice proportions */
+        /* keep nice proportions */
         object-fit: cover;
+        /* crop neatly */
+    }
+
+    .event-details {
+        padding: 12px;
+        text-align: left;
     }
 }
+
 
 
 
