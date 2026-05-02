@@ -756,6 +756,25 @@ form button:hover {
     transform: translateY(0);
 }
 
+/* Prevent sections from being permanently hidden if JS fails */
+@media (max-width: 768px) {
+    #services.reveal:not(.active),
+    #events.reveal:not(.active) {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* On mobile, disable reveal animation entirely — content must always be visible */
+@media (max-width: 768px) {
+    .reveal,
+    .reveal-text {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 /* ========================
    SCROLL SNAP (desktop only)
 ======================== */

@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ==============================
     // INTERSECTION OBSERVER (reveal animations)
-    // threshold: 0.05 so sections trigger early on mobile
+    // threshold: 0 triggers as soon as 1px enters viewport
     // ==============================
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -62,11 +62,25 @@ document.addEventListener("DOMContentLoaded", () => {
             entry.target.classList.add("active");
             observer.unobserve(entry.target);
         });
-    }, { threshold: 0.05 });
+    }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
 
     document.querySelectorAll(".reveal, .reveal-text").forEach(el => {
         observer.observe(el);
     });
+
+    // Fallback: if IntersectionObserver never fires (e.g. very tall sections on mobile),
+    // force-activate anything already in or near the viewport on scroll
+    function checkRevealFallback() {
+        document.querySelectorAll(".reveal, .reveal-text").forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight + 100) {
+                el.classList.add("active");
+            }
+        });
+    }
+    window.addEventListener("scroll", checkRevealFallback, { passive: true });
+    // Run once on load in case sections are already visible
+    checkRevealFallback();
 
     // ==============================
     // SKILL PROGRESS BARS
