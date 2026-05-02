@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bernard Lusale Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,23 +30,47 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="blob-bg"></div>
-        <img src="images/pic.jpg" alt="Avatar" class="avatar">
-        <h1>Bernard Lusale</h1>
-        <p>Software Developer , Data Analytics & ML</p>
-        <div class="badges">
-            <span>React</span><span>MAUI</span><span>UI/UX</span><span>Python</span><span>Machine
-                Learning</span><span>Cyber Security</span>
+    <section id="hero" class="hero-container">
+
+        <!-- LEFT SIDE -->
+        <div class="hero-left">
+            <h4>I’m</h4>
+            <h1>Bernard Lusale</h1>
+
+            <div class="underline"></div>
+
+            <p>
+                A software engineer building scalable systems,
+                AI solutions, and modern digital experiences.
+            </p>
+
+            <a href="#projects" class="hero-btn">
+                Show More →
+            </a>
+
+            <div class="social-icons">
+                <a href="mailto:bernardlusale20@gmail.com" target="_blank">
+                    <img src="images/gmail.png" alt="Gmail">
+                </a>
+                <a href="https://github.com/dev-lusale" target="_blank">
+                    <img src="images/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/bernard-lusale" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
         </div>
-        <div class="counters">
-            <div><span class="counter" data-target="10">0</span>+ Projects</div>
-            <div><span class=" counter" data-target="3">0</span> Years Experience</div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hero-right">
+            <div class="hero-circle"></div>
+            <img src="images/pic.jpg" class="hero-img">
         </div>
+
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="reveal">
         <h2>About Me</h2>
         <p>Passionate for creating innovative solutions and delivering exceptional user experiences.</p>
         <div class="tags">
@@ -57,7 +83,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="reveal">
         <h2>My Tech Stack</h2>
         <p>Technologies, frameworks, and tools I use to build modern, scalable, and efficient applications.</p>
 
@@ -188,11 +214,8 @@
     </section>
 
 
-    <!-- Repeat for 6 skills -->
-    </section>
-
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="reveal">
 
         <h2>Projects</h2>
 
@@ -237,7 +260,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="reveal">
         <h2>Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
@@ -256,118 +279,176 @@
                     for digital security. Engaged in hands-on security testing and incident response activities </p>
             </div>
         </div>
-
-        <!-- Services Section -->
-        <section id="services">
-            <h2>Services</h2>
-            <p>Here are the professional services I offer based on my tech stack expertise.</p>
-
-            <div class="services-grid">
-                <!-- Web Development -->
-                <div class="service-card">
-                    <img src="images/web_dev.jpg" alt="Web Development">
-                    <h3>Web Development</h3>
-                    <p>Building responsive, modern websites using React, HTML, CSS, and JavaScript for seamless user
-                        experiences.</p>
-                </div>
-
-                <!-- Backend Development -->
-                <div class="service-card">
-                    <img src="images/backend.jpg" alt="Backend Development">
-                    <h3>Backend Development</h3>
-                    <p>Developing scalable server-side applications with Node.js, Express, Java, and C# to power your
-                        systems.</p>
-                </div>
-
-                <!-- Mobile Apps -->
-                <div class="service-card">
-                    <img src="images/mobile.jpg" alt="Mobile Apps">
-                    <h3>Mobile App Development</h3>
-                    <p>Creating cross-platform mobile apps using React Native, Flutter, Dart, and .NET MAUI.</p>
-                </div>
-
-                <!-- AI/ML Solutions -->
-                <div class="service-card">
-                    <img src="images/ai_ml.jpg" alt="AI/ML Solutions">
-                    <h3>AI / ML Solutions</h3>
-                    <p>Designing intelligent systems with TensorFlow, PyTorch, OpenCV, Pandas, NumPy, and Matplotlib.
-                    </p>
-                </div>
-
-                <!-- Database Management -->
-                <div class="service-card">
-                    <img src="images/database.jpg" alt="Database Management">
-                    <h3>Database Management</h3>
-                    <p>Efficient data storage and retrieval using MongoDB, PostgreSQL, MySQL, and Firebase.</p>
-                </div>
-
-                <!-- Cyber Security -->
-                <div class="service-card">
-                    <img src="images/cyber_security.jpg" alt="Cyber Security">
-                    <h3>Cyber Security</h3>
-                    <p>Protecting digital assets with Linux-based security tools, penetration testing, and vulnerability
-                        analysis.</p>
-                </div>
-
-                <!-- Private Tutoring -->
-                <div class="service-card">
-                    <img src="images/tutoring.png.webp" alt="Private Tutoring">
-                    <h3>Private Tutoring</h3>
-                    <p>Providing personalized instruction in computer science and mathematics to help students excel.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- Events Section -->
-        <section id="events">
-            <h2>Events</h2>
-            <p>Highlights of the events I’ve attended and upcoming ones I’ll be part of.</p>
-
-            <div class="events-grid">
-                <!-- Past Event -->
-                <div class="event-card">
-                    <img src="images/event2.jpeg" alt="Tech Conference 2025">
-                    <div class="event-details">
-                        <h3>Second National Research & Innovation Symposium 2025</h3>
-                        <span class="event-date">December 2025</span>
-                        <p>2nd National Research and Innovation Symposium – Participant
-                            Attended the national symposium and learned from experts in research, innovation, and
-                            emerging technologies. Gained exposure to modern technological solutions and research-driven
-                            development</p>
-                    </div>
-                </div>
-
-                <!-- Past Event -->
-                <div class="event-card">
-                    <img src="images/event3.jpeg" alt="Hackathon">
-                    <div class="event-details">
-                        <h3>UniPod UNLEASH Hackathon on Pollution and the Future of Mining
-
-                            Mukuba UniPod</h3>
-                        <span class="event-date">July 2025</span>
-                        <p>Participated in an innovation hackathon focused on addressing pollution challenges in
-                            the mining sector. Worked with a team to develop a smart Tailings Storage Facility (TSF)
-                            monitoring system using IoT and real-time alert concepts to improve environmental safety and
-                            disaster prevention.</p>
-                    </div>
-                </div>
-
-                <!-- Upcoming Event -->
-                <div class="event-card upcoming">
-                    <img src="images/event4.jpeg" alt="Upcoming AI Summit">
-                    <div class="event-details">
-                        <h3>Evoke Data Analytics Hackathon</h3>
-                        <span class="event-date">March 2026</span>
-                        <p>Participated in the Evoke Hackathon (American Spaces, Copperbelt University), focusing on
-                            data analytics tasks involving analysis of multiple datasets to support real-world
-                            problem-solving solutions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </section>
-    <section class="education">
+
+    <!-- Services Section -->
+    <section id="services" class="reveal">
+        <h2>Services</h2>
+        <p>Here are the professional services I offer based on my tech stack expertise.</p>
+
+        <div class="services-grid">
+            <!-- Web Development -->
+            <div class="service-card">
+                <img src="images/web_dev.jpg" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Building responsive, modern websites using React, HTML, CSS, and JavaScript for seamless user
+                    experiences.</p>
+            </div>
+
+            <!-- Backend Development -->
+            <div class="service-card">
+                <img src="images/backend.jpg" alt="Backend Development">
+                <h3>Backend Development</h3>
+                <p>Developing scalable server-side applications with Node.js, Express, Java, and C# to power your
+                    systems.</p>
+            </div>
+
+            <!-- Mobile Apps -->
+            <div class="service-card">
+                <img src="images/mobile.jpg" alt="Mobile Apps">
+                <h3>Mobile App Development</h3>
+                <p>Creating cross-platform mobile apps using React Native, Flutter, Dart, and .NET MAUI.</p>
+            </div>
+
+            <!-- AI/ML Solutions -->
+            <div class="service-card">
+                <img src="images/ai_ml.jpg" alt="AI/ML Solutions">
+                <h3>AI / ML Solutions</h3>
+                <p>Designing intelligent systems with TensorFlow, PyTorch, OpenCV, Pandas, NumPy, and Matplotlib.
+                </p>
+            </div>
+
+            <!-- Database Management -->
+            <div class="service-card">
+                <img src="images/database.jpg" alt="Database Management">
+                <h3>Database Management</h3>
+                <p>Efficient data storage and retrieval using MongoDB, PostgreSQL, MySQL, and Firebase.</p>
+            </div>
+
+            <!-- Cyber Security -->
+            <div class="service-card">
+                <img src="images/cyber_security.jpg" alt="Cyber Security">
+                <h3>Cyber Security</h3>
+                <p>Protecting digital assets with Linux-based security tools, penetration testing, and vulnerability
+                    analysis.</p>
+            </div>
+
+            <!-- Private Tutoring -->
+            <div class="service-card">
+                <img src="images/tutoring.png.webp" alt="Private Tutoring">
+                <h3>Private Tutoring</h3>
+                <p>Providing personalized instruction in computer science and mathematics to help students excel.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="reveal">
+        <h2>Events</h2>
+        <p>Highlights of the events I’ve attended and upcoming ones I’ll be part of.</p>
+
+        <div class="events-grid">
+            <!-- Past Event -->
+            <div class="event-card">
+                <img src="images/event2.jpeg" alt="Tech Conference 2025">
+                <div class="event-details">
+                    <h3>Second National Research & Innovation Symposium 2025</h3>
+                    <span class="event-date">December 2025</span>
+                    <p>2nd National Research and Innovation Symposium – Participant
+                        Attended the national symposium and learned from experts in research, innovation, and
+                        emerging technologies. Gained exposure to modern technological solutions and research-driven
+                        development</p>
+                </div>
+            </div>
+
+            <!-- Past Event -->
+            <div class="event-card">
+                <img src="images/event3.jpeg" alt="Hackathon">
+                <div class="event-details">
+                    <h3>UniPod UNLEASH Hackathon on Pollution and the Future of Mining
+
+                        Mukuba UniPod</h3>
+                    <span class="event-date">July 2025</span>
+                    <p>Participated in an innovation hackathon focused on addressing pollution challenges in
+                        the mining sector. Worked with a team to develop a smart Tailings Storage Facility (TSF)
+                        monitoring system using IoT and real-time alert concepts to improve environmental safety and
+                        disaster prevention.</p>
+                </div>
+            </div>
+
+
+            <div class="event-card upcoming">
+                <img src="images/event4.jpeg" alt="Upcoming AI Summit">
+                <div class="event-details">
+                    <h3>Evoke Data Analytics Hackathon</h3>
+                    <span class="event-date">March 2026</span>
+                    <p>Participated in the Evoke Hackathon (American Spaces, Copperbelt University), focusing on
+                        data analytics tasks involving analysis of multiple datasets to support real-world
+                        problem-solving solutions.</p>
+                </div>
+            </div>
+
+            <div class="event-card upcoming">
+                <img src="images/event11.jpeg" alt="Upcoming AI Summit">
+                <div class="event-details">
+                    <h3>BongoHive Ignite Program</h3>
+                    <span class="event-date">March 2026</span>
+                    <p>
+                        Participated in the BongoHive Ignite Program, a startup and innovation initiative focused
+                        on
+                        empowering entrepreneurs with the skills to build impactful, scalable solutions.
+
+                        Through this program, I gained practical experience in:
+
+                        Innovation and product development
+                        Problem-solving using real-world data
+                        Startup thinking and execution strategies
+                        Collaboration within Zambia’s growing tech ecosystem
+
+                        This experience strengthened my ability to design and develop solutions such as IQ
+                        Insight,
+                        Aquafy, and other projects under Davion Technologies, with a focus on solving real-world
+                        challenges through technology.
+                    </p>
+                </div>
+            </div>
+
+            <div class="event-card upcoming">
+                <img src="images/event10.jpeg" alt="Upcoming AI Summit">
+                <div class="event-details">
+                    <h3>Evoke Data Analytics Hackathon 1st Prize Winner</h3>
+                    <span class="event-date">April 2026</span>
+                    <p>Proud to have emerged as winners of the Evoke Hackathon, held at American Spaces, Copperbelt
+                        University.
+
+                        The hackathon focused on data analytics, where our team worked with multiple datasets to
+                        extract insights and develop practical solutions to real-world challenges. The fast-paced
+                        environment strengthened our capabilities in analytical thinking, teamwork, and solution
+                        design.
+
+                        This achievement reflects my commitment to leveraging data and technology to drive impactful
+                        innovation, aligning with ongoing projects under Davion Technologies and beyond.</p>
+                </div>
+            </div>
+            <div class="event-card upcoming">
+                <img src="images/event5.jpeg" alt="Its Kopala 100 Summit">
+                <div class="event-details">
+                    <h3>Its Kopala 100 </h3>
+                    <span class="event-date">April 2026</span>
+                    <p> Grateful to have been part of Kopala 100 2026 held at Garden Court in Kitwe an event that
+                        brought together some of the most driven minds in technology, innovation, and
+                        entrepreneurship.
+
+                        From insightful conversations to networking with forward-thinking individuals, the
+                        experience was truly inspiring. It’s always powerful to be in spaces where ideas are shared,
+                        challenged, and transformed into real opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education reveal">
 
         <h2 class="section-title">Education</h2>
 
@@ -422,7 +503,7 @@
     </section>
 
     <!-- Logo Slider Section -->
-    <section class="logo-slider">
+    <section class="logo-slider ">
         <div class="logo-track">
 
             <div class="logo">
@@ -460,7 +541,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="reveal">
         <h2>Contact Me</h2>
         <form id="contactForm">
             <input type="text" placeholder="Your Name" required>
@@ -492,6 +573,9 @@
     <button id="scrollTop">↑</button>
 
     <script src="script.js"></script>
+
+    <div class="cursor"></div>
+    <div id="scrollProgress"></div>
 
 
 </body>

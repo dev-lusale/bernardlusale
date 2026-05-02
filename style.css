@@ -1,3 +1,13 @@
+:root {
+    --bg: #0f172a;
+    --bg-dark: #020617;
+    --card: rgba(255, 255, 255, 0.05);
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --primary: #facc15;
+    --secondary: #22d3ee;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +15,17 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     background: linear-gradient(135deg,
             #020617,
             #0f172a);
     color: #e5e7eb;
     scroll-behavior: smooth;
+
 }
 
-/* ========================
-   NAVBAR
-======================== */
+/* NAVBAR */
 
 #navbar {
     position: sticky;
@@ -84,18 +94,16 @@ nav a:hover::after {
     cursor: pointer;
 }
 
-/* ========================
-   HERO
-======================== */
+/* 
+   HERO */
 
 #hero {
-    height: 100vh;
-    text-align: center;
-
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: var(--bg-dark);
 
     /* Background Image with Transparent Overlay */
     background:
@@ -111,6 +119,12 @@ nav a:hover::after {
     position: relative;
 }
 
+h1,
+h2,
+h3 {
+    font-family: "Manrope", "Inter", sans-serif;
+}
+
 .avatar {
     width: 280px;
     border-radius: 20%;
@@ -120,16 +134,147 @@ nav a:hover::after {
     margin-bottom: 20px;
 }
 
-
-
-#hero h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 80px;
 }
 
-#hero p {
-    color: #94a3b8;
-    margin-top: 10px;
+.hero-left {
+    max-width: 600px;
+}
+
+.hero-left h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #22d3ee;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-right {
+    position: relative;
+}
+
+.hero-circle {
+    width: 350px;
+    height: 350px;
+    background: #22d3ee;
+    opacity: 0.1;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-img {
+    width: 320px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.hero-right {
+    position: relative;
+}
+
+.hero-circle {
+    width: 350px;
+    height: 350px;
+    background: #22d3ee;
+    opacity: 0.1;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-img {
+    width: 320px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+.hero-left h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.hero-left h4 {
+    color: var(--muted);
+}
+
+.hero-left p {
+    color: var(--muted);
+    max-width: 400px;
+}
+
+.hero-right {
+    position: relative;
+}
+
+.hero-circle {
+    width: 380px;
+    height: 380px;
+    background: #1e293b;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.hero-img {
+    width: 380px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-slider {
+    background: var(--bg);
+    padding: 40px 0;
 }
 
 /* Badges */
@@ -174,9 +319,8 @@ nav a:hover::after {
     color: #22d3ee;
 }
 
-/* ========================
-   SECTION STYLE
-======================== */
+/* 
+   SECTION STYLE */
 
 section {
     padding: 90px 60px;
@@ -189,9 +333,7 @@ h2 {
     color: #22d3ee;
 }
 
-/* ========================
-   ABOUT
-======================== */
+/* ABOUT*/
 
 #about p {
     max-width: 700px;
@@ -225,9 +367,6 @@ h2 {
     color: black;
 }
 
-/* ========================
-   SKILLS
-======================== */
 /* Skills Section */
 #skills {
     padding: 60px 20px;
@@ -375,13 +514,8 @@ h2 {
     transition: width 1.5s ease;
 }
 
-/* ========================
-   PROJECTS
-======================== */
 
-/* ========================
-   PROJECTS
-======================== */
+/* PROJECTS   */
 
 #projects {
 
@@ -903,4 +1037,112 @@ form button:hover {
 .event-details p {
     font-size: 0.95rem;
     color: #eee;
+}
+
+
+/* =========================
+   SCROLL ANIMATION BASE
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav a.active-link {
+    color: #22d3ee;
+}
+
+.project-card,
+.service-card,
+.event-card,
+.stack-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* deep hover lift */
+.project-card:hover,
+.service-card:hover,
+.event-card:hover,
+.stack-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(34, 211, 238, 0.15);
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+/* ========================
+   SOCIAL ICONS (HERO)
+======================== */
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icons img {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+/* hover effect like modern portfolio */
+.social-icons img:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: #22d3ee;
+    filter: brightness(1.2);
+}
+
+.reveal-text {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    transition: transform 0.05s linear;
+    z-index: 9999;
+}
+
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #183034, #4f46e5);
+    z-index: 9999;
 }
