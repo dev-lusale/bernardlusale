@@ -209,5 +209,5 @@
     #ai-chat-widget { bottom: 12px; right: 12px; }
     #ai-chat-toggle { width: 32px; height: 32px; }
     .ai-robot-svg   { width: 20px; height: 25px; }
-    #ai-chat-panel  { width: calc(100vw - 28px); max-height: 58vh; border-radius: 13px; }
+    #ai-chat-panel  { width: 260px; max-height: 380px; border-radius: 14px; }
 }
