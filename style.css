@@ -827,55 +827,279 @@ form button:hover {
    MOBILE
 ======================== */
 
-/* MOBILE FIXES */
 @media (max-width: 768px) {
+
+    /* --- NAVBAR --- */
+    #navbar {
+        padding: 14px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: block;
+        color: #22d3ee;
+    }
+
+    /* --- HERO --- */
+    #hero,
     .hero-container {
         flex-direction: column;
-        /* stack text and image vertically */
         align-items: center;
-        padding: 40px 20px;
+        justify-content: center;
+        padding: 80px 20px 50px;
         text-align: center;
+        height: auto;
+        min-height: 100vh;
     }
 
     .hero-left {
         max-width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        order: 1;
+    }
+
+    .hero-left h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-left h4 {
+        font-size: 1rem;
+    }
+
+    .hero-left p {
+        font-size: 0.95rem;
+        max-width: 100%;
+        margin: 10px auto 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .hero-right {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .hero-img {
-        width: 85%;
-        /* scale to viewport width */
-        max-width: 240px;
-        /* cap size for small screens */
-        height: auto;
-        /* keep proportions */
-        border-radius: 12px;
-        /* softer corners */
-        margin: 0 auto;
-        /* center horizontally */
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
         display: block;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-        /* professional polish */
+        margin: 0 auto;
+        box-shadow: 0 6px 24px rgba(34, 211, 238, 0.2);
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-circle {
+        width: 240px;
+        height: 240px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    /* --- SECTIONS --- */
+    section {
+        padding: 60px 18px;
+        scroll-snap-align: none;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    /* --- ABOUT --- */
+    #about p {
+        font-size: 0.95rem;
+    }
+
+    /* --- SKILLS --- */
+    .stack-grid {
+        gap: 16px;
+    }
+
+    .stack-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 16px;
+    }
+
+    .icon-item {
+        width: 60px;
+    }
+
+    .icon-item img,
+    .icon-grid img {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* --- PROJECTS --- */
+    #projects {
+        padding: 60px 18px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* --- SERVICES --- */
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 16px;
+    }
+
+    .service-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* --- EVENTS --- */
+    .events-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .event-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .event-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .event-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .event-details p {
+        font-size: 0.9rem;
+    }
+
+    /* --- EXPERIENCE / TIMELINE --- */
+    .timeline {
+        padding: 0 4px;
+    }
+
+    .timeline-item {
+        padding-left: 18px;
+        margin-bottom: 28px;
+    }
+
+    .timeline-item h3 {
+        font-size: 1rem;
+    }
+
+    /* --- EDUCATION --- */
+    .education {
+        padding: 60px 18px;
+    }
+
+    .education-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .edu-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* --- LOGO SLIDER --- */
+    .logo-track {
+        animation-duration: 60s;
+    }
+
+    /* --- CONTACT --- */
+    form {
+        padding: 0 4px;
+    }
+
+    /* --- SCROLL TOP --- */
+    #scrollTop {
+        bottom: 16px;
+        right: 16px;
+        padding: 10px 13px;
+        font-size: 16px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+    .hero-left h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-img {
+        width: 180px;
+        height: 180px;
     }
 
     .hero-circle {
         width: 200px;
         height: 200px;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        /* center behind image */
     }
 
-    .hero-left h1 {
-        font-size: 2rem;
-        /* scale down heading */
-    }
-
-    .hero-left p {
-        font-size: 1rem;
-        max-width: 90%;
-        margin: 0 auto;
+    h2 {
+        font-size: 1.5rem;
     }
 }
 
@@ -1092,6 +1316,16 @@ section {
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-snap-type: none;
+    }
+
+    section {
+        scroll-snap-align: none;
+    }
 }
 
 /* ========================
