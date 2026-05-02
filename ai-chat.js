@@ -130,7 +130,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const isOpen = panel.classList.toggle("open");
         panel.setAttribute("aria-hidden", String(!isOpen));
         toggle.setAttribute("aria-expanded", String(isOpen));
-        if (isOpen) { positionPanel(); scrollToBottom(); setTimeout(() => input.focus(), 50); }
+        if (isOpen) {
+            // On mobile reset bottom before focusing so keyboard shift is handled fresh
+            if (window.innerWidth <= 600) {
+                panel.style.bottom = "56px";
+                panel.style.top    = "auto";
+                panel.style.left   = "auto";
+            } else {
+                positionPanel();
+            }
+            scrollToBottom();
+            setTimeout(() => input.focus(), 50);
+        }
     }
 
     closeBtn.addEventListener("click", () => {
@@ -163,6 +174,19 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", () => {
         if (panel.classList.contains("open")) positionPanel();
     });
+
+    // ── Mobile keyboard: keep panel above keyboard ────────────
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", () => {
+            if (!panel.classList.contains("open")) return;
+            const isMobile = window.innerWidth <= 600;
+            if (!isMobile) return;
+            // Gap between bottom of visual viewport and bottom of layout viewport
+            const keyboardHeight = window.innerHeight - window.visualViewport.height - window.visualViewport.offsetTop;
+            const offset = Math.max(0, keyboardHeight);
+            panel.style.bottom = (56 + offset) + "px";
+        });
+    }
 
     // ── Chips ─────────────────────────────────────────────────
     document.querySelectorAll(".ai-chip").forEach(chip => {

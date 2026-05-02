@@ -209,5 +209,17 @@
     #ai-chat-widget { bottom: 12px; right: 12px; }
     #ai-chat-toggle { width: 32px; height: 32px; }
     .ai-robot-svg   { width: 20px; height: 25px; }
-    #ai-chat-panel  { width: 260px; max-height: 380px; border-radius: 14px; }
+
+    /* On mobile the panel anchors above the button, not via JS top/left */
+    #ai-chat-panel {
+        width: 260px;
+        max-height: 380px;
+        border-radius: 14px;
+        /* Override JS positioning on mobile — anchor bottom-right */
+        position: fixed !important;
+        bottom: 56px !important;
+        right: 12px !important;
+        top: auto !important;
+        left: auto !important;
+    }
 }
