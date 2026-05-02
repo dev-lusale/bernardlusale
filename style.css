@@ -839,33 +839,27 @@ form button:hover {
 
 @media (max-width: 768px) {
 
-    #hero {
+    .stack-grid {
         flex-direction: column;
-        text-align: center;
-        padding: 100px 20px;
+        align-items: center;
     }
 
-    .hero-container {
-        flex-direction: column;
-        height: auto;
-        padding: 40px 20px;
+    .stack-card {
+        width: 100%;
+        max-width: 340px;
     }
 
-    .hero-left h1 {
-        font-size: 2.2rem;
+    .icon-grid {
+        gap: 10px;
     }
 
-    .hero-right {
-        margin-top: 40px;
+    .icon-item {
+        width: 60px;
     }
 
-    .hero-img {
-        width: 260px;
-    }
-
-    .hero-circle {
-        width: 260px;
-        height: 260px;
+    .icon-item img {
+        width: 40px;
+        height: 40px;
     }
 }
 
