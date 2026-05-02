@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ==============================
-    // SAFETY HELPERS
-    // ==============================
+
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector("nav ul");
     const scrollBtn = document.getElementById("scrollTop");
     const navbar = document.getElementById("navbar");
     const cursor = document.querySelector(".cursor");
     const heroCircle = document.querySelector(".hero-circle");
-
-    const counters = document.querySelectorAll(".counter");
-    const progressBars = document.querySelectorAll(".progress-bar");
     const navLinks = document.querySelectorAll("nav a");
+    const progressBars = document.querySelectorAll(".progress-bar");
 
     // ==============================
     // HAMBURGER MENU
@@ -19,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
             navMenu.classList.toggle("show");
-            // Optional: toggle icon between ☰ and ✖
             hamburger.innerHTML = navMenu.classList.contains("show") ? "&times;" : "&#9776;";
         });
 
@@ -28,46 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 navMenu.classList.remove("show");
                 hamburger.innerHTML = "&#9776;";
             });
-        });
-    }
-
-    // ==============================
-    // COUNTER ANIMATION (RUN ONCE)
-    // ==============================
-    let countersStarted = false;
-    function runCounters() {
-        if (countersStarted) return;
-        countersStarted = true;
-
-        counters.forEach(counter => {
-            const target = +counter.getAttribute("data-target");
-            let count = 0;
-            const speed = target / 100;
-
-            function update() {
-                count += speed;
-                if (count < target) {
-                    counter.innerText = Math.floor(count);
-                    requestAnimationFrame(update);
-                } else {
-                    counter.innerText = target;
-                }
-            }
-            update();
-        });
-    }
-
-    // ==============================
-    // SKILL PROGRESS BARS
-    // ==============================
-    let progressStarted = false;
-    function showProgress() {
-        if (progressStarted) return;
-        progressStarted = true;
-
-        progressBars.forEach(bar => {
-            const value = bar.getAttribute("data-progress");
-            bar.style.width = value + "%";
         });
     }
 
@@ -85,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==============================
-    // NAVBAR SHADOW
+    // NAVBAR SHADOW ON SCROLL
     // ==============================
     window.addEventListener("scroll", () => {
         if (!navbar) return;
@@ -94,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ==============================
-    // INTERSECTION OBSERVER
+    // INTERSECTION OBSERVER (reveal animations)
+    // threshold: 0.05 so sections trigger early on mobile
     // ==============================
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -102,14 +58,27 @@ document.addEventListener("DOMContentLoaded", () => {
             entry.target.classList.add("active");
             observer.unobserve(entry.target);
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.05 });
 
     document.querySelectorAll(".reveal, .reveal-text").forEach(el => {
         observer.observe(el);
     });
 
     // ==============================
-    // ACTIVE NAV LINK SCROLL
+    // SKILL PROGRESS BARS
+    // ==============================
+    let progressStarted = false;
+    function showProgress() {
+        if (progressStarted) return;
+        progressStarted = true;
+        progressBars.forEach(bar => {
+            const value = bar.getAttribute("data-progress");
+            bar.style.width = value + "%";
+        });
+    }
+
+    // ==============================
+    // ACTIVE NAV LINK ON SCROLL
     // ==============================
     window.addEventListener("scroll", () => {
         let current = "";
@@ -124,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navLinks.forEach(link => {
             link.classList.remove("active-link");
-            if (link.getAttribute("href").includes(current)) {
+            if (link.getAttribute("href") && link.getAttribute("href").includes(current)) {
                 link.classList.add("active-link");
             }
         });
@@ -142,23 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==============================
-    // MAGNETIC BUTTON EFFECT
-    // ==============================
-    document.querySelectorAll(".hero-btn, button, .service-card")
-        .forEach(btn => {
-            btn.addEventListener("mousemove", (e) => {
-                const rect = btn.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-                btn.style.transform =
-                    `translate(${x * 0.15}px, ${y * 0.15}px) scale(1.03)`;
-            });
-            btn.addEventListener("mouseleave", () => {
-                btn.style.transform = "translate(0,0) scale(1)";
-            });
-        });
-
-    // ==============================
     // CUSTOM CURSOR
     // ==============================
     if (cursor) {
@@ -167,55 +119,18 @@ document.addEventListener("DOMContentLoaded", () => {
             cursor.style.top = e.clientY + "px";
         });
     }
-});
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
-    const scrollBtn = document.getElementById("scrollTop");
-    const navbar = document.getElementById("navbar");
-    const cursor = document.querySelector(".cursor");
-    const heroCircle = document.querySelector(".hero-circle");
-    const navLinks = document.querySelectorAll("nav a");
 
     // ==============================
-    // HAMBURGER MENU
+    // SCROLL PROGRESS BAR
     // ==============================
-    if (hamburger && navMenu) {
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("show");
-            hamburger.innerHTML = navMenu.classList.contains("show") ? "&times;" : "&#9776;";
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("show");
-                hamburger.innerHTML = "&#9776;";
-            });
+    const scrollProgress = document.getElementById("scrollProgress");
+    if (scrollProgress) {
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = progress + "%";
         });
     }
 
-    // ==============================
-    // INTERSECTION OBSERVER (Reveal Animations)
-    // ==============================
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("active");
-            observer.unobserve(entry.target);
-        });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll(".reveal, .reveal-text").forEach(el => {
-        observer.observe(el);
-    });
-
-    // ==============================
-    // CUSTOM CURSOR
-    // ==============================
-    if (cursor) {
-        window.addEventListener("mousemove", (e) => {
-            cursor.style.left = e.clientX + "px";
-            cursor.style.top = e.clientY + "px";
-        });
-    }
 });
