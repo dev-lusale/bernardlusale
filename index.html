@@ -630,6 +630,131 @@
     <div class="cursor"></div>
     <div id="scrollProgress"></div>
 
+    <!-- AI Chat Widget -->
+    <div id="ai-chat-widget">
+
+        <!-- Floating Robot Button -->
+        <button id="ai-chat-toggle" aria-label="Open AI Assistant" aria-expanded="false">
+            <!-- 3D-style robot SVG matching the Floatbot aesthetic -->
+            <svg class="ai-robot-svg" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body -->
+                <ellipse cx="40" cy="72" rx="26" ry="22" fill="url(#bodyGrad)"/>
+                <!-- Arms -->
+                <ellipse cx="13" cy="72" rx="7" ry="11" rx="6" fill="url(#armGrad)" transform="rotate(-15 13 72)"/>
+                <ellipse cx="67" cy="72" rx="7" ry="11" fill="url(#armGrad)" transform="rotate(15 67 72)"/>
+                <!-- Neck -->
+                <rect x="34" y="42" width="12" height="10" rx="4" fill="url(#neckGrad)"/>
+                <!-- Head -->
+                <ellipse cx="40" cy="34" rx="22" ry="20" fill="url(#headGrad)"/>
+                <!-- Visor band -->
+                <rect x="20" y="26" width="40" height="14" rx="5" fill="#1e2a4a" opacity="0.85"/>
+                <!-- Left eye -->
+                <circle cx="31" cy="33" r="5" fill="#00e5a0"/>
+                <circle cx="31" cy="33" r="2.5" fill="#00ff99"/>
+                <circle cx="32.5" cy="31.5" r="1" fill="white" opacity="0.7"/>
+                <!-- Right eye -->
+                <circle cx="49" cy="33" r="5" fill="#00e5a0"/>
+                <circle cx="49" cy="33" r="2.5" fill="#00ff99"/>
+                <circle cx="50.5" cy="31.5" r="1" fill="white" opacity="0.7"/>
+                <!-- Antenna -->
+                <line x1="40" y1="14" x2="40" y2="22" stroke="#c8d8f0" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="40" cy="11" r="4" fill="url(#antennaGrad)"/>
+                <!-- Body shine -->
+                <ellipse cx="40" cy="60" rx="14" ry="8" fill="white" opacity="0.08"/>
+                <defs>
+                    <radialGradient id="headGrad" cx="40%" cy="35%" r="60%">
+                        <stop offset="0%" stop-color="#e8f0ff"/>
+                        <stop offset="100%" stop-color="#b8c8e8"/>
+                    </radialGradient>
+                    <radialGradient id="bodyGrad" cx="40%" cy="30%" r="65%">
+                        <stop offset="0%" stop-color="#dce8ff"/>
+                        <stop offset="100%" stop-color="#a8bcd8"/>
+                    </radialGradient>
+                    <radialGradient id="armGrad" cx="40%" cy="30%" r="65%">
+                        <stop offset="0%" stop-color="#d0dcf0"/>
+                        <stop offset="100%" stop-color="#9aacc8"/>
+                    </radialGradient>
+                    <linearGradient id="neckGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#c8d8f0"/>
+                        <stop offset="100%" stop-color="#a0b4d0"/>
+                    </linearGradient>
+                    <radialGradient id="antennaGrad" cx="40%" cy="35%" r="60%">
+                        <stop offset="0%" stop-color="#e060a0"/>
+                        <stop offset="100%" stop-color="#c03080"/>
+                    </radialGradient>
+                </defs>
+            </svg>
+            <span class="ai-pulse-ring"></span>
+        </button>
+
+        <!-- Chat Panel -->
+        <div id="ai-chat-panel" aria-hidden="true" role="dialog" aria-label="Chat with Bernard's AI">
+
+            <!-- Header -->
+            <div id="ai-chat-header">
+                <div class="ai-header-left">
+                    <!-- Mini robot in header -->
+                    <div class="ai-header-avatar">
+                        <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="20" cy="37" rx="13" ry="11" fill="url(#mBodyGrad)"/>
+                            <ellipse cx="7" cy="37" rx="3.5" ry="5.5" fill="url(#mArmGrad)" transform="rotate(-15 7 37)"/>
+                            <ellipse cx="33" cy="37" rx="3.5" ry="5.5" fill="url(#mArmGrad)" transform="rotate(15 33 37)"/>
+                            <rect x="17" y="21" width="6" height="5" rx="2" fill="#b0c4de"/>
+                            <ellipse cx="20" cy="17" rx="11" ry="10" fill="url(#mHeadGrad)"/>
+                            <rect x="10" y="13" width="20" height="7" rx="2.5" fill="#1e2a4a" opacity="0.85"/>
+                            <circle cx="15.5" cy="16.5" r="2.5" fill="#00e5a0"/>
+                            <circle cx="15.5" cy="16.5" r="1.2" fill="#00ff99"/>
+                            <circle cx="24.5" cy="16.5" r="2.5" fill="#00e5a0"/>
+                            <circle cx="24.5" cy="16.5" r="1.2" fill="#00ff99"/>
+                            <line x1="20" y1="7" x2="20" y2="11" stroke="#c8d8f0" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="20" cy="5.5" r="2" fill="#e060a0"/>
+                            <defs>
+                                <radialGradient id="mHeadGrad" cx="40%" cy="35%" r="60%">
+                                    <stop offset="0%" stop-color="#e8f0ff"/>
+                                    <stop offset="100%" stop-color="#b8c8e8"/>
+                                </radialGradient>
+                                <radialGradient id="mBodyGrad" cx="40%" cy="30%" r="65%">
+                                    <stop offset="0%" stop-color="#dce8ff"/>
+                                    <stop offset="100%" stop-color="#a8bcd8"/>
+                                </radialGradient>
+                                <radialGradient id="mArmGrad" cx="40%" cy="30%" r="65%">
+                                    <stop offset="0%" stop-color="#d0dcf0"/>
+                                    <stop offset="100%" stop-color="#9aacc8"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="ai-header-text">
+                        <span class="ai-name">Bernard's AI Agent</span>
+                        <span class="ai-status"><span class="ai-dot"></span>Online · Powered by Gemini</span>
+                    </div>
+                </div>
+                <button id="ai-chat-close" aria-label="Close chat">✕</button>
+            </div>
+
+            <!-- Messages -->
+            <div id="ai-chat-messages" role="log" aria-live="polite">
+                <div class="ai-msg ai-msg--bot">
+                    <span class="ai-msg-text">Hey I'm Bernard's AI agent.</span>
+                    <span class="ai-msg-time">now</span>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div id="ai-chat-footer">
+                <input id="ai-chat-input" type="text" placeholder="Ask me anything…" autocomplete="off" aria-label="Type your message"/>
+                <button id="ai-chat-send" aria-label="Send">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ai-chat.js"></script>
 
 </body>
 
