@@ -828,12 +828,14 @@ form button:hover {
 ======================== */
 
 @media (max-width: 768px) {
+
+    /* Hamburger fix */
     .hamburger {
-        display: block;
+        display: block !important;
+        /* force it to show */
         cursor: pointer;
         font-size: 28px;
         z-index: 1001;
-        /* keep it clickable above everything */
     }
 
     nav ul {
@@ -848,19 +850,39 @@ form button:hover {
         z-index: 1000;
         transition: transform 0.3s ease;
         transform: translateX(100%);
-        /* hidden off-screen */
     }
 
     nav ul.show {
         display: flex;
         transform: translateX(0);
-        /* slide in */
     }
 
     nav ul li {
         margin: 12px 0;
     }
+
+    /* Events fix */
+    .events-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        width: 95%;
+        max-width: 340px;
+        margin-bottom: 20px;
+    }
+
+    .event-card img {
+        width: 100%;
+        height: auto;
+        /* responsive */
+        aspect-ratio: 16/9;
+        /* keep proportions */
+        object-fit: cover;
+    }
 }
+
 
 
 
