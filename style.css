@@ -1023,10 +1023,7 @@ html {
     }
 
     .event-card img {
-        width: 100%;
-        max-height: 35vh;    /* 35% of viewport height */
-        object-fit: cover;
-        border-radius: 8px;
+        height: 100px;
     }
 
     .event-details h3 {
