@@ -828,10 +828,11 @@ form button:hover {
 ======================== */
 
 @media (max-width: 768px) {
-
-    /* NAV */
     .hamburger {
         display: block;
+        cursor: pointer;
+        z-index: 1001;
+        /* keep it clickable above everything */
     }
 
     nav ul {
@@ -840,43 +841,28 @@ form button:hover {
         top: 70px;
         right: 0;
         background: #020617;
-        width: 200px;
+        width: 220px;
         flex-direction: column;
         padding: 15px;
+        z-index: 1000;
+        /* ensure menu sits above hero */
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+        /* hidden off-screen */
     }
 
     nav ul.show {
         display: flex;
+        transform: translateX(0);
+        /* slide in */
     }
 
-    /* HERO */
-    .hero-container {
-        flex-direction: column;
-        height: auto;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .hero-left h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-img {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .hero-circle {
-        width: 260px;
-        height: 260px;
-    }
-
-    /* EVENTS */
-    .event-card img {
-        height: auto;
-        aspect-ratio: 16/9;
+    nav ul li {
+        margin: 12px 0;
     }
 }
+
+
 
 /* Desktop Icons */
 
