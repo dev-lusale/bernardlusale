@@ -991,18 +991,20 @@ form button:hover {
     /* --- SERVICES --- */
     .services-grid {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 20px;
+        padding: 0 4px;
     }
 
     .service-card {
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         padding: 20px 16px;
+        box-sizing: border-box;
     }
 
     .service-card img {
-        width: 100%;
+        width: 100% !important;
         height: 180px;
         object-fit: cover;
     }
@@ -1010,13 +1012,15 @@ form button:hover {
     /* --- EVENTS --- */
     .events-grid {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 20px;
+        padding: 0 4px;
     }
 
     .event-card {
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
 
     .event-card img {
@@ -1170,7 +1174,7 @@ form button:hover {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 25px;
-    width: 280px;
+    width: clamp(260px, 30%, 300px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -1233,7 +1237,7 @@ form button:hover {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     overflow: hidden;
-    width: 300px;
+    width: clamp(280px, 30%, 340px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
