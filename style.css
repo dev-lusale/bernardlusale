@@ -837,23 +837,24 @@ form button:hover {
    MOBILE
 ======================== */
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
+
+    /* ================= NAVBAR ================= */
+    #navbar {
+        padding: 15px 20px;
+    }
 
     nav ul {
-
         position: absolute;
-
-        right: 0;
-
         top: 70px;
-
+        right: 0;
+        width: 100%;
         flex-direction: column;
-
-        background: #020617;
-
-        width: 200px;
-
+        background: rgba(2, 6, 23, 0.98);
+        padding: 20px;
         display: none;
+        gap: 20px;
+        text-align: center;
     }
 
     nav ul.show {
@@ -864,15 +865,108 @@ form button:hover {
         display: block;
     }
 
-    section {
-        padding: 70px 25px;
+    /* ================= HERO ================= */
+    #hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
     }
 
+    .hero-container {
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-left p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .hero-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-img,
+    .hero-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+        padding: 60px 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* ================= COUNTERS ================= */
     .counters {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
+
+    /* ================= SKILLS / GRID ================= */
+    .stack-grid,
+    .services-grid,
+    .events-grid,
+    .project-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr !important;
+        align-items: center;
+    }
+
+    .stack-card,
+    .service-card,
+    .event-card,
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* ================= ICONS ================= */
+    .icon-grid {
+        justify-content: center;
+    }
+
+    /* ================= BADGES ================= */
+    .badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* ================= EDUCATION ================= */
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* ================= HERO BUTTON ================= */
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Desktop Icons */

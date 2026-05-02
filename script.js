@@ -122,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".reveal, .reveal-text").forEach(el => {
         observer.observe(el);
     });
+
     // ==============================
     // ACTIVE NAV LINK SCROLL
     // ==============================
