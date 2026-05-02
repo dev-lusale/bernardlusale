@@ -872,8 +872,8 @@ form button:hover {
     }
 
     .hero-img {
-        width: 90%;
-        max-width: 300px;
+        width: 50%;
+        max-width: 200px;
     }
 
     .hero-circle {
