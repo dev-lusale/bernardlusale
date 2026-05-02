@@ -839,27 +839,57 @@ form button:hover {
 
 @media (max-width: 768px) {
 
-    .stack-grid {
+    /* HERO */
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-right {
+        margin-top: 40px;
+    }
+
+    .hero-img {
+        width: 260px;
+    }
+
+    .hero-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    /* IMPORTANT FIX: KEEP FLEX CLEAN */
+    .project-grid,
+    .events-grid,
+    .services-grid {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
-    .stack-card {
+    .project-card,
+    .event-card,
+    .service-card {
         width: 100%;
-        max-width: 340px;
+        max-width: 350px;
     }
 
-    .icon-grid {
-        gap: 10px;
-    }
-
-    .icon-item {
-        width: 60px;
-    }
-
-    .icon-item img {
-        width: 40px;
-        height: 40px;
+    /* EVENTS IMAGE FIX */
+    .event-card img {
+        height: 200px;
+        object-fit: cover;
     }
 }
 
