@@ -828,44 +828,40 @@ form button:hover {
 ======================== */
 
 @media (max-width: 768px) {
-    .hero-img {
-        width: 85%;
-        /* scales to viewport width */
-        max-width: 240px;
-        /* cap size for small screens */
-        height: auto;
-        /* keep proportions */
-        border-radius: 12px;
-        /* softer corners */
-        margin: 20px auto;
-        /* center horizontally */
+    .hamburger {
         display: block;
-        /* ensure proper centering */
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-        /* professional polish */
+        cursor: pointer;
+        font-size: 28px;
+        z-index: 1001;
+        /* keep it clickable above everything */
     }
 
-    .hero-circle {
-        width: 200px;
-        /* shrink background circle */
-        height: 200px;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        /* center behind image */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #020617;
+        width: 220px;
+        flex-direction: column;
+        padding: 15px;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+        /* hidden off-screen */
     }
 
-    .hero-left h1 {
-        font-size: 2rem;
-        /* scale down heading */
-        text-align: center;
+    nav ul.show {
+        display: flex;
+        transform: translateX(0);
+        /* slide in */
     }
 
-    .hero-left p {
-        text-align: center;
-        margin: 0 auto;
+    nav ul li {
+        margin: 12px 0;
     }
 }
+
 
 
 /* Desktop Icons */
