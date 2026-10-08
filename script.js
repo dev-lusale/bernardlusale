@@ -151,4 +151,52 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+
+    // ==============================
+    // COLLAPSIBLE GRIDS
+    // Projects / Services / Events — show first N cards, hide rest
+    // ==============================
+    function initCollapsibleGrid(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (!section) return;
+
+        const grid = section.querySelector('.collapsible-grid');
+        if (!grid) return;
+
+        const btn = section.querySelector('.toggle-btn');
+        if (!btn) return;
+
+        const visible = parseInt(grid.dataset.visible) || 3;
+        const cards = Array.from(grid.children);
+
+        // Hide cards beyond the visible count
+        cards.forEach((card, i) => {
+            if (i >= visible) card.classList.add('hidden-item');
+        });
+
+        // Only show button if there are hidden cards
+        if (cards.length <= visible) {
+            btn.closest('.toggle-wrap').style.display = 'none';
+            return;
+        }
+
+        btn.addEventListener('click', () => {
+            const isExpanded = btn.classList.contains('expanded');
+
+            cards.forEach((card, i) => {
+                if (i >= visible) {
+                    card.classList.toggle('hidden-item', isExpanded);
+                }
+            });
+
+            btn.classList.toggle('expanded', !isExpanded);
+            btn.innerHTML = isExpanded
+                ? 'Show More <span class="toggle-arrow">&#8964;</span>'
+                : 'Show Less <span class="toggle-arrow">&#8964;</span>';
+        });
+    }
+
+    initCollapsibleGrid('projects');
+    initCollapsibleGrid('services');
+    initCollapsibleGrid('events');
 });

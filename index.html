@@ -13,6 +13,13 @@
 
 <body>
 
+    <!-- Announcement Bar -->
+    <div id="announcement-bar">
+        <span class="ann-deco">✦</span>
+        <span class="ann-text">Open to freelance · collaborations · full-time roles &nbsp;·&nbsp; Based in Zambia 🇿🇲</span>
+        <span class="ann-deco">✦</span>
+    </div>
+
     <!-- Navbar -->
     <header id="navbar">
         <div class="logo">Bernard Lusale</div>
@@ -28,6 +35,10 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <!-- Nav right -->
+        <div class="nav-right">
+            <a href="#contact" class="nav-cta">Hire Me</a>
+        </div>
         <!-- Hamburger for mobile -->
         <div class="hamburger">&#9776;</div>
     </header>
@@ -37,6 +48,7 @@
 
         <!-- LEFT SIDE -->
         <div class="hero-left">
+            <p class="hero-kicker">Software Engineer &middot; AI Builder &middot; Zambia</p>
             <h4>I’m</h4>
             <h1>Bernard Lusale</h1>
 
@@ -47,9 +59,10 @@
                 AI solutions, and modern digital experiences.
             </p>
 
-            <a href="#projects" class="hero-btn">
-                Show More →
-            </a>
+            <div class="hero-ctas">
+                <a href="#projects" class="hero-btn">View My Work &rarr;</a>
+                <a href="#contact" class="hero-btn-secondary">Get in Touch</a>
+            </div>
 
             <div class="social-icons">
                 <a href="mailto:bernardlusale20@gmail.com" target="_blank">
@@ -222,43 +235,24 @@
 
         <h2>Projects</h2>
 
-        <div class="project-grid">
 
-            <div class="project-card">
-                <img src="images/xero_one.png" alt="Project 1">
-                <h3>Xero1</h3>
-                <p>
-                    A Windows Forms application that can convert
-                    number systems.
-                </p>
-                <a href="https://github.com/dev-lusale/Xero1.git">
-                    View Project
-                </a>
-            </div>
+            <a href="https://github.com/dev-lusale/Xero1.git" target="_blank" class="project-card">
+                <img src="images/xero_one.png" alt="Xero1">
+                <div class="project-card-name">Xero1</div>
+            </a>
 
-            <div class="project-card">
-                <img src="images/Tech_mart.jpg">
-                <h3>Tech Mart</h3>
-                <p>
-                    A web application for managing tech products.
-                </p>
-                <a href="https://github.com/dev-lusale/TechMart.git">
-                    View Project
-                </a>
-            </div>
+            <a href="https://github.com/dev-lusale/TechMart.git" target="_blank" class="project-card">
+                <img src="images/Tech_mart.jpg" alt="Tech Mart">
+                <div class="project-card-name">Tech Mart</div>
+            </a>
 
-            <div class="project-card">
-                <img src="images/task_image.jpg">
-                <h3>Task Manager</h3>
-                <p>
-                    A web application for managing tasks.
-                </p>
-                <a href="https://github.com/dev-lusale/task-manager.git">
-                    View Project
-                </a>
-            </div>
+            <a href="https://github.com/dev-lusale/task-manager.git" target="_blank" class="project-card">
+                <img src="images/task_image.jpg" alt="Task Manager">
+                <div class="project-card-name">Task Manager</div>
+            </a>
 
         </div>
+        <div class="toggle-wrap"><button class="toggle-btn" data-target="projects">Show More <span class="toggle-arrow">&#8964;</span></button></div>
 
     </section>
 
@@ -266,21 +260,47 @@
     <section id="experience" class="reveal">
         <h2>Experience</h2>
         <div class="timeline">
+
             <div class="timeline-item">
-                <h3>Cyber Security Analyst @ Future Interns</h3>
-                <span>2023 - 2025</span>
-                <p>Competitive cybersecurity internship focused on protecting digital assets and enhancing security
-                    posture. Selected based on strong foundation in cybersecurity, problem-solving skills, and
-                    passion
-                    for digital security. Engaged in hands-on security testing and incident response activities.</p>
+                <h3>ICT Systems & Service Desk Support Intern · ZESCO Limited</h3>
+                <span>Sep 2026 – Present · Lusaka, Zambia · On-site</span>
+                <p>Provide first-line ICT support to users and assist with troubleshooting hardware, software,
+                    networking, printers, and system-related issues. Configure and support shared/network printers
+                    and departmental printing services. Assist users with Microsoft 365, OneDrive, file sharing,
+                    and basic Windows system administration. Diagnose network connectivity and workstation issues
+                    and escalate complex technical problems when required. Support day-to-day IT service desk
+                    operations and user technical assistance.</p>
             </div>
-            <!-- Add more timeline items here -->
+
             <div class="timeline-item">
-                <h3>Cyber Security Analyst @ Rydonox</h3>
-                <span>2024 - 2025</span>
-                <p>Selected based on strong foundation in cybersecurity, problem-solving skills, and passion
-                    for digital security. Engaged in hands-on security testing and incident response activities </p>
+                <h3>President · ICTAZ CBU Chapter</h3>
+                <span>Aug 2026 – Present · Kitwe, Zambia</span>
+                <p>Lead the ICTAZ CBU Chapter and coordinate executive activities, projects, and student-focused
+                    ICT initiatives. Promote practical skills development in programming, Artificial Intelligence,
+                    Data Science, Robotics, and emerging technologies. Facilitate engagement between students,
+                    lecturers, technology companies, and industry professionals. Drive initiatives focused on
+                    bridging the gap between academic learning and industry requirements. Provide strategic
+                    leadership, team coordination, and stakeholder engagement.</p>
             </div>
+
+            <div class="timeline-item">
+                <h3>Co-Founder & CTO · BUSAKA ENVIROWORKS LIMITED</h3>
+                <span>Mar 2026 – Present · Copperbelt Province, Zambia · Self-employed</span>
+                <p>Lead the technical direction and technology development of the company. Design and develop
+                    technology-driven solutions addressing environmental and mining-related challenges. Lead
+                    software development, IoT integration, data collection, monitoring systems, and digital
+                    solutions. Coordinate technical innovation, prototyping, and product development. Contribute
+                    to the company's incubation and innovation activities within Zambia's technology ecosystem.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Founder · Kalulu Vision</h3>
+                <span>2026 – Present · AI & Software Solutions for African Challenges</span>
+                <p>Building AI and software solutions tailored to African challenges, with a focus on Artificial
+                    Intelligence, software development, data solutions, and locally relevant technologies —
+                    including work around Zambian Sign Language recognition and accessibility tools.</p>
+            </div>
+
         </div>
     </section>
 
@@ -289,7 +309,7 @@
         <h2>Services</h2>
         <p>Here are the professional services I offer based on my tech stack expertise.</p>
 
-        <div class="services-grid">
+        <div class="services-grid collapsible-grid" data-visible="3">
             <!-- Web Development -->
             <div class="service-card">
                 <img src="images/web_dev.jpg" alt="Web Development">
@@ -344,6 +364,7 @@
                 </p>
             </div>
         </div>
+        <div class="toggle-wrap"><button class="toggle-btn" data-target="services">Show More <span class="toggle-arrow">&#8964;</span></button></div>
     </section>
 
     <!-- Events Section -->
@@ -351,7 +372,7 @@
         <h2>Events</h2>
         <p>Highlights of the events I’ve attended and upcoming ones I’ll be part of.</p>
 
-        <div class="events-grid">
+        <div class="events-grid collapsible-grid" data-visible="3">
             <!-- Past Event -->
             <div class="event-card">
                 <img src="images/event2.jpeg" alt="Tech Conference 2025">
@@ -449,6 +470,7 @@
                 </div>
             </div>
         </div>
+        <div class="toggle-wrap"><button class="toggle-btn" data-target="events">Show More <span class="toggle-arrow">&#8964;</span></button></div>
     </section>
 
     <section class="education reveal">
@@ -525,9 +547,6 @@
                 <img src="images/unipod_logo.png">
             </div>
 
-            <div class="logo">
-                <img src="images/yuma_logo.jpeg">
-            </div>
 
             <div class="logo">
                 <img src="images/cbu_logo.png">
@@ -545,74 +564,72 @@
 
     <!-- Contact Section -->
     <section id="contact" class="reveal">
-        <h2>Contact Me</h2>
 
+        <!-- Contact Info Banner -->
+        <div class="contact-banner">
+            <h2 class="contact-banner-title">Get In Touch</h2>
+            <div class="contact-cols">
 
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+                <div class="contact-col">
+                    <div class="contact-col-icon"><img src="images/user.png" alt="Location"></div>
+                    <h4 class="contact-col-label">Location</h4>
+                    <p>Riverside Campus, Copperbelt University</p>
+                    <p>Kitwe, Zambia</p>
+                </div>
 
-        <!-- Contact Details -->
-        <div class="contact-details">
-            <a href="mailto:bernardlusale20@gmail.com" class="contact-row">
-                <div class="contact-row-icon"><img src="images/gmail.png" alt="Email"></div>
-                <div class="contact-row-text">
-                    <span class="contact-row-label">Email</span>
-                    <span class="contact-row-value">bernardlusale20@gmail.com</span>
+                <div class="contact-col">
+                    <div class="contact-col-icon"><img src="images/24-hour-service.png" alt="Availability"></div>
+                    <h4 class="contact-col-label">Availability</h4>
+                    <p>Open to Remote &amp; On-site</p>
+                    <p>Mon &ndash; Sat, 08:00 &ndash; 18:00 CAT</p>
                 </div>
-            </a>
-            <a href="https://www.linkedin.com/in/bernard-lusale" target="_blank" class="contact-row">
-                <div class="contact-row-icon"><img src="images/linkedin.png" alt="LinkedIn"></div>
-                <div class="contact-row-text">
-                    <span class="contact-row-label">LinkedIn</span>
-                    <span class="contact-row-value">linkedin.com/in/bernard-lusale</span>
+
+                <div class="contact-col">
+                    <div class="contact-col-icon"><img src="images/repairing-service.png" alt="Services"></div>
+                    <h4 class="contact-col-label">Services</h4>
+                    <p>Web &middot; Mobile &middot; AI/ML</p>
+                    <p>Data Analytics &middot; Cyber Security &middot; Tutoring</p>
                 </div>
-            </a>
-            <a href="https://github.com/dev-lusale" target="_blank" class="contact-row">
-                <div class="contact-row-icon"><img src="images/github.png" alt="GitHub"></div>
-                <div class="contact-row-text">
-                    <span class="contact-row-label">GitHub</span>
-                    <span class="contact-row-value">github.com/dev-lusale</span>
-                </div>
-            </a>
-            <div class="contact-row">
-                <div class="contact-row-icon"><img src="images/user.png" alt="Location"></div>
-                <div class="contact-row-text">
-                    <span class="contact-row-label">Location</span>
-                    <span class="contact-row-value">Riverside Campus, Copperbelt University, Kitwe, Zambia</span>
-                </div>
-            </div>
-            <div class="contact-row">
-                <div class="contact-row-icon"><img src="images/24-hour-service.png" alt="Availability"></div>
-                <div class="contact-row-text">
-                    <span class="contact-row-label">Availability</span>
-                    <span class="contact-row-value">Open to Remote &amp; On-site &nbsp;·&nbsp; Mon – Sat, 08:00 – 18:00
-                        CAT</span>
-                </div>
-            </div>
-            <div class="contact-row">
-                <div class="contact-row-icon"><img src="images/repairing-service.png" alt="Services"></div>
-                <div class="contact-row-text">
-                    <span class="contact-row-label">Services</span>
-                    <span class="contact-row-value">Web · Mobile · AI/ML · Data Analytics · Cyber Security ·
-                        Tutoring</span>
-                </div>
+
+                <a href="mailto:bernardlusale20@gmail.com" class="contact-col contact-col-link">
+                    <div class="contact-col-icon"><img src="images/gmail.png" alt="Email"></div>
+                    <h4 class="contact-col-label">Email</h4>
+                    <p>bernardlusale20@gmail.com</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/bernard-lusale" target="_blank" class="contact-col contact-col-link">
+                    <div class="contact-col-icon"><img src="images/linkedin.png" alt="LinkedIn"></div>
+                    <h4 class="contact-col-label">LinkedIn</h4>
+                    <p>linkedin.com/in/bernard-lusale</p>
+                </a>
+
+                <a href="https://github.com/dev-lusale" target="_blank" class="contact-col contact-col-link">
+                    <div class="contact-col-icon"><img src="images/github.png" alt="GitHub"></div>
+                    <h4 class="contact-col-label">GitHub</h4>
+                    <p>github.com/dev-lusale</p>
+                </a>
+
             </div>
         </div>
 
-        <!-- Google Map -->
-        <div class="map-container">
-            <h3 class="map-title">Find Me Here</h3>
-            <div class="map-wrapper">
-                <iframe title="Copperbelt University Riverside Campus, Kitwe"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.5!2d28.2403!3d-12.8056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19723e28ce7a7849%3A0x2d5c397c3c72e75d!2sCopperbelt%20University!5e0!3m2!1sen!2szm!4v1700000000000!5m2!1sen!2szm"
-                    width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+        <!-- Message Form -->
+        <div class="contact-form-wrap">
+            <h3 class="contact-form-title">Message Me</h3>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Google Map — full width -->
+        <div class="contact-map">
+            <iframe title="Copperbelt University Riverside Campus, Kitwe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.5!2d28.2403!3d-12.8056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19723e28ce7a7849%3A0x2d5c397c3c72e75d!2sCopperbelt%20University!5e0!3m2!1sen!2szm!4v1700000000000!5m2!1sen!2szm"
+                width="100%" height="440" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
 
     </section>
