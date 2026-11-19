@@ -1,775 +1,864 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bernard Lusale Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ai-chat.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bernard Lusale | Computer Scientist, AI &amp; Big Data Enthusiast</title>
+  <meta name="description" content="Explore the portfolio of Bernard Lusale, a Computer Science student, software developer and technology innovator focused on artificial intelligence, big data and African technology solutions.">
+  <link rel="canonical" href="https://dev-lusale.github.io/bernardlusale/">
+  <meta name="theme-color" content="#080808">
+  <meta name="color-scheme" content="dark">
+  <meta name="author" content="Bernard Lusale">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Bernard Lusale">
+  <meta property="og:url" content="https://dev-lusale.github.io/bernardlusale/">
+  <meta property="og:title" content="Bernard Lusale | Computer Scientist, AI &amp; Big Data Enthusiast">
+  <meta property="og:description" content="Building intelligent solutions. Creating meaningful impact. Projects, research and leadership from Copperbelt University, Zambia.">
+  <meta property="og:image" content="https://dev-lusale.github.io/bernardlusale/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bernard Lusale's orange logo with his name and title on a black background">
+  <meta property="profile:first_name" content="Bernard">
+  <meta property="profile:last_name" content="Lusale">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/logo-192.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var seen = false;
+      try { seen = sessionStorage.getItem('bl-intro') === '1'; } catch (e) {}
+      if (!reduce && !seen) d.classList.add('intro-on');
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bernard Lusale",
+    "url": "https://dev-lusale.github.io/bernardlusale/",
+    "image": "https://dev-lusale.github.io/bernardlusale/assets/img/bernard-portrait.webp",
+    "jobTitle": "Computer Science student and software developer",
+    "description": "Computer Scientist and AI & Big Data enthusiast building technology for African challenges.",
+    "email": "mailto:bernardlusale20@gmail.com",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Copperbelt University" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Kitwe", "addressCountry": "ZM" },
+    "knowsAbout": ["Artificial intelligence", "Machine learning", "Big data", "Data science", "Natural language processing", "Computer vision", "Software engineering"],
+    "sameAs": ["https://github.com/dev-lusale", "https://www.linkedin.com/in/bernard-lusale"]
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- Announcement Bar -->
-    <div id="announcement-bar">
-        <span class="ann-deco">✦</span>
-        <span class="ann-text">Open to freelance · collaborations · full-time roles &nbsp;·&nbsp; Based in Zambia 🇿🇲</span>
-        <span class="ann-deco">✦</span>
+  <!-- Opening sequence (only shown once per session, never with reduced motion) -->
+  <div class="intro" id="intro">
+    <div class="intro-stage" aria-hidden="true">
+      <img class="intro-logo" src="assets/img/logo-480.webp" alt="" width="240" height="240">
+      <p class="intro-name"><span>Bernard</span> <span>Lusale</span></p>
+      <p class="intro-line">Building Intelligent Solutions. Creating Meaningful Impact.</p>
     </div>
-
-    <!-- Navbar -->
-    <header id="navbar">
-        <div class="logo">Bernard Lusale</div>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Nav right -->
-        <div class="nav-right">
-            <a href="#contact" class="nav-cta">Hire Me</a>
-        </div>
-        <!-- Hamburger for mobile -->
-        <div class="hamburger">&#9776;</div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero-container">
-
-        <!-- LEFT SIDE -->
-        <div class="hero-left">
-            <p class="hero-kicker">Software Engineer &middot; AI Builder &middot; Zambia</p>
-            <h4>I’m</h4>
-            <h1>Bernard Lusale</h1>
-
-            <div class="underline"></div>
-
-            <p>
-                A software engineer building scalable systems,
-                AI solutions, and modern digital experiences.
-            </p>
-
-            <div class="hero-ctas">
-                <a href="#projects" class="hero-btn">View My Work &rarr;</a>
-                <a href="#contact" class="hero-btn-secondary">Get in Touch</a>
-            </div>
-
-            <div class="social-icons">
-                <a href="mailto:bernardlusale20@gmail.com" target="_blank">
-                    <img src="images/gmail.png" alt="Gmail">
-                </a>
-                <a href="https://github.com/dev-lusale" target="_blank">
-                    <img src="images/github.png" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/bernard-lusale" target="_blank">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-        </div>
-
-        <!-- RIGHT SIDE -->
-        <div class="hero-right">
-            <div class="hero-circle"></div>
-            <img src="images/pic.jpg" class="hero-img">
-        </div>
-
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="reveal">
-        <h2>About Me</h2>
-        <p>Passionate for creating innovative solutions and delivering exceptional user experiences.</p>
-        <div class="tags">
-            <span class="tag">Creative</span>
-            <span class="tag">Collaborative</span>
-            <span class="tag">Problem Solver</span>
-            <span class="tag">Private Tutor</span>
-        </div>
-
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="reveal">
-        <h2>My Tech Stack</h2>
-        <p>Technologies, frameworks, and tools I use to build modern, scalable, and efficient applications.</p>
-
-        <div class="stack-grid">
-            <!-- Frontend -->
-            <div class="stack-card">
-                <h3>Frontend</h3>
-                <div class="icon-grid">
-                    <div class="icon-item">
-                        <img src="images/react_native.png" alt="React Native">
-                        <span>React Native</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/html-5.png" alt="HTML">
-                        <span>HTML</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/css-3.png" alt="CSS">
-                        <span>CSS</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/java-script.png" alt="JavaScript">
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Backend -->
-            <div class="stack-card">
-                <h3>Backend</h3>
-                <div class="icon-grid">
-                    <div class="icon-item">
-                        <img src="images/Node.js.png" alt="Node.js">
-                        <span>Node.js</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/Express.png" alt="Express">
-                        <span>Express</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/Java.png" alt="Java">
-                        <span>Java</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/csharp.png" alt="C#">
-                        <span>C#</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/Python.png" alt="C#">
-                        <span>Python
-
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobile -->
-            <div class="stack-card">
-                <h3>Mobile</h3>
-                <div class="icon-grid">
-                    <div class="icon-item">
-                        <img src="images/react_native.png" alt="React Native">
-                        <span>React Native</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/flutter.png" alt="Flutter">
-                        <span>Flutter</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/dart.png" alt="Dart">
-                        <span>Dart</span>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images/dotnet_maui.png" alt=".NET MAUI">
-                        <span>.NET MAUI</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI/ML -->
-            <div class="stack-card">
-                <h3>AI / ML</h3>
-                <div class="icon-grid">
-                    <div class="icon-item"><img src="images/tensorflow.png" alt="TensorFlow"><span>TensorFlow</span>
-                    </div>
-                    <div class="icon-item"><img src="images/PyTorch.png" alt="PyTorch"><span>PyTorch</span></div>
-                    <div class="icon-item"><img src="images/OpenCV.png" alt="OpenCV"><span>OpenCV</span></div>
-                    <div class="icon-item"><img src="images/Pandas.png" alt="Pandas"><span>Pandas</span></div>
-                    <div class="icon-item"><img src="images/NumPy.png" alt="NumPy"><span>NumPy</span></div>
-                    <div class="icon-item"><img src="images/Matplotlib.png" alt="Matplotlib"><span>Matplotlib</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Database -->
-            <div class="stack-card">
-                <h3>Database</h3>
-                <div class="icon-grid">
-                    <div class="icon-item"><img src="images/MongoDB.png" alt="MongoDB"><span>MongoDB</span></div>
-                    <div class="icon-item"><img src="images/postgre.png" alt="PostgreSQL"><span>PostgreSQL</span>
-                    </div>
-                    <div class="icon-item"><img src="images/mysql.png" alt="MySQL"><span>MySQL</span></div>
-                    <div class="icon-item"><img src="images/Firebase.png" alt="Firebase"><span>Firebase</span></div>
-                </div>
-            </div>
-
-            <!-- Cyber Security -->
-            <div class="stack-card">
-                <h3>Cyber Security</h3>
-                <div class="icon-grid">
-                    <div class="icon-item"><img src="images/Linux.png" alt="Linux"><span>Linux</span></div>
-                </div>
-            </div>
-
-            <!-- Tools & Others -->
-            <div class="stack-card">
-                <h3>Tools & Others</h3>
-                <div class="icon-grid">
-                    <div class="icon-item"><img src="images/Git.png" alt="Git"><span>Git</span></div>
-                    <div class="icon-item"><img src="images/Docker.png" alt="Docker"><span>Docker</span></div>
-                    <div class="icon-item"><img src="images/AWS.png" alt="AWS"><span>AWS</span></div>
-                    <div class="icon-item"><img src="images/Vercel.png" alt="Vercel"><span>Vercel</span></div>
-                    <div class="icon-item"><img src="images/Visual Studio Code (VS Code).png" alt="VS Code"><span>VS
-                            Code</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="reveal">
-
-        <h2>Projects</h2>
-
-
-            <a href="https://github.com/dev-lusale/Xero1.git" target="_blank" class="project-card">
-                <img src="images/xero_one.png" alt="Xero1">
-                <div class="project-card-name">Xero1</div>
-            </a>
-
-            <a href="https://github.com/dev-lusale/TechMart.git" target="_blank" class="project-card">
-                <img src="images/Tech_mart.jpg" alt="Tech Mart">
-                <div class="project-card-name">Tech Mart</div>
-            </a>
-
-            <a href="https://github.com/dev-lusale/task-manager.git" target="_blank" class="project-card">
-                <img src="images/task_image.jpg" alt="Task Manager">
-                <div class="project-card-name">Task Manager</div>
-            </a>
-
-        </div>
-        <div class="toggle-wrap"><button class="toggle-btn" data-target="projects">Show More <span class="toggle-arrow">&#8964;</span></button></div>
-
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="reveal">
-        <h2>Experience</h2>
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <h3>ICT Systems & Service Desk Support Intern · ZESCO Limited</h3>
-                <span>Sep 2026 – Present · Lusaka, Zambia · On-site</span>
-                <p>Provide first-line ICT support to users and assist with troubleshooting hardware, software,
-                    networking, printers, and system-related issues. Configure and support shared/network printers
-                    and departmental printing services. Assist users with Microsoft 365, OneDrive, file sharing,
-                    and basic Windows system administration. Diagnose network connectivity and workstation issues
-                    and escalate complex technical problems when required. Support day-to-day IT service desk
-                    operations and user technical assistance.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>President · ICTAZ CBU Chapter</h3>
-                <span>Aug 2026 – Present · Kitwe, Zambia</span>
-                <p>Lead the ICTAZ CBU Chapter and coordinate executive activities, projects, and student-focused
-                    ICT initiatives. Promote practical skills development in programming, Artificial Intelligence,
-                    Data Science, Robotics, and emerging technologies. Facilitate engagement between students,
-                    lecturers, technology companies, and industry professionals. Drive initiatives focused on
-                    bridging the gap between academic learning and industry requirements. Provide strategic
-                    leadership, team coordination, and stakeholder engagement.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Co-Founder & CTO · BUSAKA ENVIROWORKS LIMITED</h3>
-                <span>Mar 2026 – Present · Copperbelt Province, Zambia · Self-employed</span>
-                <p>Lead the technical direction and technology development of the company. Design and develop
-                    technology-driven solutions addressing environmental and mining-related challenges. Lead
-                    software development, IoT integration, data collection, monitoring systems, and digital
-                    solutions. Coordinate technical innovation, prototyping, and product development. Contribute
-                    to the company's incubation and innovation activities within Zambia's technology ecosystem.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Founder · Kalulu Vision</h3>
-                <span>2026 – Present · AI & Software Solutions for African Challenges</span>
-                <p>Building AI and software solutions tailored to African challenges, with a focus on Artificial
-                    Intelligence, software development, data solutions, and locally relevant technologies —
-                    including work around Zambian Sign Language recognition and accessibility tools.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="reveal">
-        <h2>Services</h2>
-        <p>Here are the professional services I offer based on my tech stack expertise.</p>
-
-        <div class="services-grid collapsible-grid" data-visible="3">
-            <!-- Web Development -->
-            <div class="service-card">
-                <img src="images/web_dev.jpg" alt="Web Development">
-                <h3>Web Development</h3>
-                <p>Building responsive, modern websites using React, HTML, CSS, and JavaScript for seamless user
-                    experiences.</p>
-            </div>
-
-            <!-- Backend Development -->
-            <div class="service-card">
-                <img src="images/backend.jpg" alt="Backend Development">
-                <h3>Backend Development</h3>
-                <p>Developing scalable server-side applications with Node.js, Express, Java, and C# to power your
-                    systems.</p>
-            </div>
-
-            <!-- Mobile Apps -->
-            <div class="service-card">
-                <img src="images/mobile.jpg" alt="Mobile Apps">
-                <h3>Mobile App Development</h3>
-                <p>Creating cross-platform mobile apps using React Native, Flutter, Dart, and .NET MAUI.</p>
-            </div>
-
-            <!-- AI/ML Solutions -->
-            <div class="service-card">
-                <img src="images/ai_ml.jpg" alt="AI/ML Solutions">
-                <h3>AI / ML Solutions</h3>
-                <p>Designing intelligent systems with TensorFlow, PyTorch, OpenCV, Pandas, NumPy, and Matplotlib.
-                </p>
-            </div>
-
-            <!-- Database Management -->
-            <div class="service-card">
-                <img src="images/database.jpg" alt="Database Management">
-                <h3>Database Management</h3>
-                <p>Efficient data storage and retrieval using MongoDB, PostgreSQL, MySQL, and Firebase.</p>
-            </div>
-
-            <!-- Cyber Security -->
-            <div class="service-card">
-                <img src="images/cyber_security.jpg" alt="Cyber Security">
-                <h3>Cyber Security</h3>
-                <p>Protecting digital assets with Linux-based security tools, penetration testing, and vulnerability
-                    analysis.</p>
-            </div>
-
-            <!-- Private Tutoring -->
-            <div class="service-card">
-                <img src="images/tutoring.png.webp" alt="Private Tutoring">
-                <h3>Private Tutoring</h3>
-                <p>Providing personalized instruction in computer science and mathematics to help students excel.
-                </p>
-            </div>
-        </div>
-        <div class="toggle-wrap"><button class="toggle-btn" data-target="services">Show More <span class="toggle-arrow">&#8964;</span></button></div>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="reveal">
-        <h2>Events</h2>
-        <p>Highlights of the events I’ve attended and upcoming ones I’ll be part of.</p>
-
-        <div class="events-grid collapsible-grid" data-visible="3">
-            <!-- Past Event -->
-            <div class="event-card">
-                <img src="images/event2.jpeg" alt="Tech Conference 2025">
-                <div class="event-details">
-                    <h3>Second National Research & Innovation Symposium 2025</h3>
-                    <span class="event-date">December 2025</span>
-                    <p>2nd National Research and Innovation Symposium – Participant
-                        Attended the national symposium and learned from experts in research, innovation, and
-                        emerging technologies. Gained exposure to modern technological solutions and research-driven
-                        development</p>
-                </div>
-            </div>
-
-            <!-- Past Event -->
-            <div class="event-card">
-                <img src="images/event3.jpeg" alt="Hackathon">
-                <div class="event-details">
-                    <h3>UniPod UNLEASH Hackathon on Pollution and the Future of Mining
-
-                        Mukuba UniPod</h3>
-                    <span class="event-date">July 2025</span>
-                    <p>Participated in an innovation hackathon focused on addressing pollution challenges in
-                        the mining sector. Worked with a team to develop a smart Tailings Storage Facility (TSF)
-                        monitoring system using IoT and real-time alert concepts to improve environmental safety and
-                        disaster prevention.</p>
-                </div>
-            </div>
-
-
-            <div class="event-card upcoming">
-                <img src="images/event4.jpeg" alt="Upcoming AI Summit">
-                <div class="event-details">
-                    <h3>Evoke Data Analytics Hackathon</h3>
-                    <span class="event-date">March 2026</span>
-                    <p>Participated in the Evoke Hackathon (American Spaces, Copperbelt University), focusing on
-                        data analytics tasks involving analysis of multiple datasets to support real-world
-                        problem-solving solutions.</p>
-                </div>
-            </div>
-
-            <div class="event-card upcoming">
-                <img src="images/event11.jpeg" alt="Upcoming AI Summit">
-                <div class="event-details">
-                    <h3>BongoHive Ignite Program</h3>
-                    <span class="event-date">March 2026</span>
-                    <p>
-                        Participated in the BongoHive Ignite Program, a startup and innovation initiative focused
-                        on
-                        empowering entrepreneurs with the skills to build impactful, scalable solutions.
-
-                        Through this program, I gained practical experience in:
-
-                        Innovation and product development
-                        Problem-solving using real-world data
-                        Startup thinking and execution strategies
-                        Collaboration within Zambia’s growing tech ecosystem
-
-                        This experience strengthened my ability to design and develop solutions such as IQ
-                        Insight,
-                        Aquafy, and other projects under Davion Technologies, with a focus on solving real-world
-                        challenges through technology.
-                    </p>
-                </div>
-            </div>
-
-            <div class="event-card upcoming">
-                <img src="images/event10.jpeg" alt="Upcoming AI Summit">
-                <div class="event-details">
-                    <h3>Evoke Data Analytics Hackathon 1st Prize Winner</h3>
-                    <span class="event-date">April 2026</span>
-                    <p>Proud to have emerged as winners of the Evoke Hackathon, held at American Spaces, Copperbelt
-                        University.
-
-                        The hackathon focused on data analytics, where our team worked with multiple datasets to
-                        extract insights and develop practical solutions to real-world challenges. The fast-paced
-                        environment strengthened our capabilities in analytical thinking, teamwork, and solution
-                        design.
-
-                        This achievement reflects my commitment to leveraging data and technology to drive impactful
-                        innovation, aligning with ongoing projects under Davion Technologies and beyond.</p>
-                </div>
-            </div>
-            <div class="event-card upcoming">
-                <img src="images/event5.jpeg" alt="Its Kopala 100 Summit">
-                <div class="event-details">
-                    <h3>Its Kopala 100 </h3>
-                    <span class="event-date">April 2026</span>
-                    <p> Grateful to have been part of Kopala 100 2026 held at Garden Court in Kitwe an event that
-                        brought together some of the most driven minds in technology, innovation, and
-                        entrepreneurship.
-
-                        From insightful conversations to networking with forward-thinking individuals, the
-                        experience was truly inspiring. It’s always powerful to be in spaces where ideas are shared,
-                        challenged, and transformed into real opportunities.</p>
-                </div>
-            </div>
-        </div>
-        <div class="toggle-wrap"><button class="toggle-btn" data-target="events">Show More <span class="toggle-arrow">&#8964;</span></button></div>
-    </section>
-
-    <section class="education reveal">
-
-        <h2 class="section-title">Education</h2>
-
-        <div class="education-container">
-
-            <!-- Copperbelt University -->
-
-            <div class="education-card">
-
-                <img src="images/cbu_logo.png" alt="Copperbelt University Logo" class="edu-logo">
-
-                <div class="edu-details">
-
-                    <h3>Copperbelt University</h3>
-
-                    <p>
-                        Bachelor of Science in Computer Science
-                    </p>
-
-                    <span class="edu-year">
-                        2023 – Present
-                    </span>
-
-                </div>
-
-            </div>
-
-            <!-- Choma Secondary School -->
-
-            <div class="education-card">
-
-                <img src="images/bic_logo.png" alt="Choma Secondary School Logo" class="edu-logo">
-
-                <div class="edu-details">
-
-                    <h3>Choma Secondary School</h3>
-
-                    <p>
-                        Secondary School Certificate
-                    </p>
-
-                    <span class="edu-year">
-                        Completed
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Logo Slider Section -->
-    <section class="logo-slider ">
-        <div class="logo-track">
-
-            <div class="logo">
-                <img src="images/yuma_logo.jpeg">
-            </div>
-
-            <div class="logo">
-                <img src="images/cbu_logo.png">
-            </div>
-
-            <div class="logo">
-                <img src="images/undp_logo.png">
-            </div>
-
-            <div class="logo">
-                <img src="images/unipod_logo.png">
-            </div>
-
-
-            <div class="logo">
-                <img src="images/cbu_logo.png">
-            </div>
-
-            <div class="logo">
-                <img src="images/undp_logo.png">
-            </div>
-
-            <div class="logo">
-                <img src="images/unipod_logo.png">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="reveal">
-
-        <!-- Contact Info Banner -->
-        <div class="contact-banner">
-            <h2 class="contact-banner-title">Get In Touch</h2>
-            <div class="contact-cols">
-
-                <div class="contact-col">
-                    <div class="contact-col-icon"><img src="images/user.png" alt="Location"></div>
-                    <h4 class="contact-col-label">Location</h4>
-                    <p>Riverside Campus, Copperbelt University</p>
-                    <p>Kitwe, Zambia</p>
-                </div>
-
-                <div class="contact-col">
-                    <div class="contact-col-icon"><img src="images/24-hour-service.png" alt="Availability"></div>
-                    <h4 class="contact-col-label">Availability</h4>
-                    <p>Open to Remote &amp; On-site</p>
-                    <p>Mon &ndash; Sat, 08:00 &ndash; 18:00 CAT</p>
-                </div>
-
-                <div class="contact-col">
-                    <div class="contact-col-icon"><img src="images/repairing-service.png" alt="Services"></div>
-                    <h4 class="contact-col-label">Services</h4>
-                    <p>Web &middot; Mobile &middot; AI/ML</p>
-                    <p>Data Analytics &middot; Cyber Security &middot; Tutoring</p>
-                </div>
-
-                <a href="mailto:bernardlusale20@gmail.com" class="contact-col contact-col-link">
-                    <div class="contact-col-icon"><img src="images/gmail.png" alt="Email"></div>
-                    <h4 class="contact-col-label">Email</h4>
-                    <p>bernardlusale20@gmail.com</p>
-                </a>
-
-                <a href="https://www.linkedin.com/in/bernard-lusale" target="_blank" class="contact-col contact-col-link">
-                    <div class="contact-col-icon"><img src="images/linkedin.png" alt="LinkedIn"></div>
-                    <h4 class="contact-col-label">LinkedIn</h4>
-                    <p>linkedin.com/in/bernard-lusale</p>
-                </a>
-
-                <a href="https://github.com/dev-lusale" target="_blank" class="contact-col contact-col-link">
-                    <div class="contact-col-icon"><img src="images/github.png" alt="GitHub"></div>
-                    <h4 class="contact-col-label">GitHub</h4>
-                    <p>github.com/dev-lusale</p>
-                </a>
-
-            </div>
-        </div>
-
-        <!-- Message Form -->
-        <div class="contact-form-wrap">
-            <h3 class="contact-form-title">Message Me</h3>
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-
-        <!-- Google Map — full width -->
-        <div class="contact-map">
-            <iframe title="Copperbelt University Riverside Campus, Kitwe"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.5!2d28.2403!3d-12.8056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19723e28ce7a7849%3A0x2d5c397c3c72e75d!2sCopperbelt%20University!5e0!3m2!1sen!2szm!4v1700000000000!5m2!1sen!2szm"
-                width="100%" height="440" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-
-    </section>
-
-    <!-- Scroll to top button -->
-    <button id="scrollTop">↑</button>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <p>© 2025 Bernard Lusale · Built with passion in Kitwe, Zambia</p>
-        <p class="footer-tagline">Open to freelance · collaborations · full-time roles</p>
-    </footer>
-
-    <script src="script.js"></script>
-
-    <div class="cursor"></div>
-    <div id="scrollProgress"></div>
-
-    <!-- AI Chat Widget -->
-    <div id="ai-chat-widget">
-
-        <!-- Floating Robot Button -->
-        <button id="ai-chat-toggle" aria-label="Open AI Assistant" aria-expanded="false">
-            <!-- 3D-style robot SVG matching the Floatbot aesthetic -->
-            <svg class="ai-robot-svg" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Body -->
-                <ellipse cx="40" cy="72" rx="26" ry="22" fill="url(#bodyGrad)"/>
-                <!-- Arms -->
-                <ellipse cx="13" cy="72" rx="7" ry="11" rx="6" fill="url(#armGrad)" transform="rotate(-15 13 72)"/>
-                <ellipse cx="67" cy="72" rx="7" ry="11" fill="url(#armGrad)" transform="rotate(15 67 72)"/>
-                <!-- Neck -->
-                <rect x="34" y="42" width="12" height="10" rx="4" fill="url(#neckGrad)"/>
-                <!-- Head -->
-                <ellipse cx="40" cy="34" rx="22" ry="20" fill="url(#headGrad)"/>
-                <!-- Visor band -->
-                <rect x="20" y="26" width="40" height="14" rx="5" fill="#1e2a4a" opacity="0.85"/>
-                <!-- Left eye -->
-                <circle cx="31" cy="33" r="5" fill="#00e5a0"/>
-                <circle cx="31" cy="33" r="2.5" fill="#00ff99"/>
-                <circle cx="32.5" cy="31.5" r="1" fill="white" opacity="0.7"/>
-                <!-- Right eye -->
-                <circle cx="49" cy="33" r="5" fill="#00e5a0"/>
-                <circle cx="49" cy="33" r="2.5" fill="#00ff99"/>
-                <circle cx="50.5" cy="31.5" r="1" fill="white" opacity="0.7"/>
-                <!-- Antenna -->
-                <line x1="40" y1="14" x2="40" y2="22" stroke="#c8d8f0" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="40" cy="11" r="4" fill="url(#antennaGrad)"/>
-                <!-- Body shine -->
-                <ellipse cx="40" cy="60" rx="14" ry="8" fill="white" opacity="0.08"/>
-                <defs>
-                    <radialGradient id="headGrad" cx="40%" cy="35%" r="60%">
-                        <stop offset="0%" stop-color="#e8f0ff"/>
-                        <stop offset="100%" stop-color="#b8c8e8"/>
-                    </radialGradient>
-                    <radialGradient id="bodyGrad" cx="40%" cy="30%" r="65%">
-                        <stop offset="0%" stop-color="#dce8ff"/>
-                        <stop offset="100%" stop-color="#a8bcd8"/>
-                    </radialGradient>
-                    <radialGradient id="armGrad" cx="40%" cy="30%" r="65%">
-                        <stop offset="0%" stop-color="#d0dcf0"/>
-                        <stop offset="100%" stop-color="#9aacc8"/>
-                    </radialGradient>
-                    <linearGradient id="neckGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#c8d8f0"/>
-                        <stop offset="100%" stop-color="#a0b4d0"/>
-                    </linearGradient>
-                    <radialGradient id="antennaGrad" cx="40%" cy="35%" r="60%">
-                        <stop offset="0%" stop-color="#e060a0"/>
-                        <stop offset="100%" stop-color="#c03080"/>
-                    </radialGradient>
-                </defs>
-            </svg>
-            <span class="ai-pulse-ring"></span>
+    <button class="intro-skip" type="button" data-intro-skip>Skip intro</button>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home" aria-label="Bernard Lusale, home">
+        <img src="assets/img/logo-96.webp" alt="" width="36" height="36">
+        <span>Bernard Lusale</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home" data-nav>Home</a></li>
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#experience" data-nav>Experience</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#achievements" data-nav>Achievements</a></li>
+          <li><a href="#research" data-nav>Research &amp; Interests</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-solid btn-sm header-cta" href="#contact">Let's Connect</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu" data-menu-open>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer-inner">
+      <div class="drawer-head">
+        <span class="mono">Menu</span>
+        <button class="close-btn" type="button" aria-label="Close menu" data-menu-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
         </button>
+      </div>
+      <nav aria-label="Mobile">
+        <ol class="drawer-list">
+          <li><a href="#home" data-nav><span class="mono">01</span>Home</a></li>
+          <li><a href="#about" data-nav><span class="mono">02</span>About</a></li>
+          <li><a href="#experience" data-nav><span class="mono">03</span>Experience</a></li>
+          <li><a href="#projects" data-nav><span class="mono">04</span>Projects</a></li>
+          <li><a href="#achievements" data-nav><span class="mono">05</span>Achievements</a></li>
+          <li><a href="#research" data-nav><span class="mono">06</span>Research &amp; Interests</a></li>
+          <li><a href="#contact" data-nav><span class="mono">07</span>Contact</a></li>
+        </ol>
+      </nav>
+      <p class="drawer-foot mono">Kitwe, Zambia · <a href="mailto:bernardlusale20@gmail.com">bernardlusale20@gmail.com</a></p>
+    </div>
+  </div>
 
-        <!-- Chat Panel -->
-        <div id="ai-chat-panel" aria-hidden="true" role="dialog" aria-label="Chat with Bernard's AI">
+  <main id="main" tabindex="-1">
 
-            <!-- Header -->
-            <div id="ai-chat-header">
-                <div class="ai-header-left">
-                    <!-- Mini robot in header -->
-                    <div class="ai-header-avatar">
-                        <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="20" cy="37" rx="13" ry="11" fill="url(#mBodyGrad)"/>
-                            <ellipse cx="7" cy="37" rx="3.5" ry="5.5" fill="url(#mArmGrad)" transform="rotate(-15 7 37)"/>
-                            <ellipse cx="33" cy="37" rx="3.5" ry="5.5" fill="url(#mArmGrad)" transform="rotate(15 33 37)"/>
-                            <rect x="17" y="21" width="6" height="5" rx="2" fill="#b0c4de"/>
-                            <ellipse cx="20" cy="17" rx="11" ry="10" fill="url(#mHeadGrad)"/>
-                            <rect x="10" y="13" width="20" height="7" rx="2.5" fill="#1e2a4a" opacity="0.85"/>
-                            <circle cx="15.5" cy="16.5" r="2.5" fill="#00e5a0"/>
-                            <circle cx="15.5" cy="16.5" r="1.2" fill="#00ff99"/>
-                            <circle cx="24.5" cy="16.5" r="2.5" fill="#00e5a0"/>
-                            <circle cx="24.5" cy="16.5" r="1.2" fill="#00ff99"/>
-                            <line x1="20" y1="7" x2="20" y2="11" stroke="#c8d8f0" stroke-width="1.5" stroke-linecap="round"/>
-                            <circle cx="20" cy="5.5" r="2" fill="#e060a0"/>
-                            <defs>
-                                <radialGradient id="mHeadGrad" cx="40%" cy="35%" r="60%">
-                                    <stop offset="0%" stop-color="#e8f0ff"/>
-                                    <stop offset="100%" stop-color="#b8c8e8"/>
-                                </radialGradient>
-                                <radialGradient id="mBodyGrad" cx="40%" cy="30%" r="65%">
-                                    <stop offset="0%" stop-color="#dce8ff"/>
-                                    <stop offset="100%" stop-color="#a8bcd8"/>
-                                </radialGradient>
-                                <radialGradient id="mArmGrad" cx="40%" cy="30%" r="65%">
-                                    <stop offset="0%" stop-color="#d0dcf0"/>
-                                    <stop offset="100%" stop-color="#9aacc8"/>
-                                </radialGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                </div>
-                <button id="ai-chat-close" aria-label="Close chat">✕</button>
-            </div>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-name">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <img class="hero-ghost" src="assets/img/logo-480.webp" alt="" width="480" height="480" data-depth="0.08">
+      </div>
 
-            <!-- Messages -->
-            <div id="ai-chat-messages" role="log" aria-live="polite">
-                <div class="ai-msg ai-msg--bot">
-                    <span class="ai-msg-text">Hey I'm Bernard's AI agent.</span>
-                    <span class="ai-msg-time">now</span>
-                </div>
-            </div>
-
-            <!-- Input -->
-            <div id="ai-chat-footer">
-                <input id="ai-chat-input" type="text" placeholder="Ask me anything…" autocomplete="off" aria-label="Type your message"/>
-                <button id="ai-chat-send" aria-label="Send">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="22" y1="2" x2="11" y2="13"/>
-                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                    </svg>
-                </button>
-            </div>
-
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker anim" style="--d:0">Computer Scientist <span aria-hidden="true">|</span> AI &amp; Big Data Enthusiast</p>
+          <h1 id="hero-name" class="hero-name">
+            <span class="line"><span class="anim-up" style="--d:1">Bernard</span></span>
+            <span class="line"><span class="anim-up" style="--d:2">Lusale<span class="dot" aria-hidden="true">.</span></span></span>
+          </h1>
+          <p class="hero-tag anim" style="--d:3"><em>Engineering Intelligence.</em> Building Technology That Matters.</p>
+          <p class="hero-lead anim" style="--d:4">I explore the intersection of artificial intelligence, software engineering and data-driven innovation to build practical solutions for real-world challenges.</p>
+          <div class="hero-cta anim" style="--d:5">
+            <a class="btn btn-solid" href="#projects">View My Work
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-line" href="#contact">Let's Connect</a>
+          </div>
         </div>
+
+        <figure class="hero-figure anim" style="--d:2">
+          <div class="portrait-frame" data-depth="-0.05">
+            <img src="assets/img/bernard-portrait.webp" alt="Portrait of Bernard Lusale in a burgundy blazer and glasses" width="636" height="594" fetchpriority="high">
+          </div>
+          <figcaption class="hero-cap">
+            <img src="assets/img/logo-96.webp" alt="" width="40" height="40">
+            <span><strong>Copperbelt University</strong>BSc Computer Science · Kitwe, Zambia</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="wrap hero-facts anim" style="--d:6">
+        <ul>
+          <li><span class="mono">2026</span>ZICTA 100 Innovators</li>
+          <li><span class="mono">2026</span>1st Prize, Evoke Data Analytics Hackathon</li>
+          <li><span class="mono">2026</span>Team KUDJOBA, Moscow</li>
+          <li><span class="mono">2026/27</span>President, ICTAZ-CBU</li>
+        </ul>
+        <a class="scroll-cue" href="#about"><span class="sr-only">Scroll to About</span><span aria-hidden="true"></span></a>
+      </div>
+    </section>
+
+    <!-- slogan band -->
+    <div class="band" aria-hidden="true">
+      <div class="band-track">
+        <span>Building Intelligent Solutions</span><i></i><span>Creating Meaningful Impact</span><i></i>
+        <span>Building Intelligent Solutions</span><i></i><span>Creating Meaningful Impact</span><i></i>
+        <span>Building Intelligent Solutions</span><i></i><span>Creating Meaningful Impact</span><i></i>
+      </div>
     </div>
 
-    <script src="ai-chat.js"></script>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <header class="chapter reveal">
+          <span class="chapter-no mono">01</span>
+          <p class="chapter-label mono">About</p>
+        </header>
 
+        <div class="about-grid">
+          <figure class="about-figure reveal">
+            <div class="mask-img" data-depth="0.04">
+              <img src="assets/img/bernard-workspace.webp" alt="Bernard working on a laptop in a computer lab" width="567" height="1008" loading="lazy" decoding="async">
+            </div>
+          </figure>
+
+          <div class="about-copy">
+            <h2 id="about-title" class="display reveal">I build technology for the conditions people actually live in.</h2>
+            <p class="lede reveal">I'm a Computer Science student at Copperbelt University in Kitwe, Zambia. Most of my work starts from a local problem: teachers short on preparation time, languages that mainstream software ignores, vehicles that lose satellite positioning, mining communities exposed to environmental risk.</p>
+            <p class="reveal">Those problems come with constraints that shape every design decision: low-end devices, limited bandwidth and patchy connectivity. Working within them is the part I enjoy most. It's where artificial intelligence and data stop being buzzwords and become tools that have to earn their place.</p>
+            <p class="reveal">Alongside my degree I founded Kalulu Vision, co-founded Busaka Enviroworks, lead the ICTAZ Copperbelt University chapter and compete in hackathons and project contests, at home and abroad.</p>
+
+            <ul class="interest-list reveal">
+              <li>Artificial Intelligence</li><li>Machine Learning</li><li>Big Data</li><li>Software Engineering</li><li>Data Science</li><li>African-language technologies</li><li>Innovation &amp; entrepreneurship</li>
+            </ul>
+            <a class="text-link reveal" href="#journey">Follow my journey <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="edu" id="education">
+          <h3 class="sub-title reveal">Education</h3>
+          <div class="edu-grid">
+            <article class="edu-item reveal">
+              <p class="mono edu-when">2023 – Present</p>
+              <h4>Copperbelt University</h4>
+              <p class="edu-what">Bachelor of Science in Computer Science</p>
+              <p class="muted">Riverside Campus, Kitwe. Coursework includes numerical analysis, statistics, discrete mathematics and object-oriented programming in Java.</p>
+              <p class="edu-mile"><span class="mono">Milestone</span>One of three students selected by the CBU Directorate of Research to represent Zambia at the International Transport Project Contest in Moscow.</p>
+            </article>
+            <article class="edu-item reveal">
+              <p class="mono edu-when">Completed</p>
+              <h4>Choma Secondary School</h4>
+              <p class="edu-what">Secondary School Certificate</p>
+              <p class="muted">Where my interest in mathematics and computing began.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <header class="chapter reveal">
+          <span class="chapter-no mono">02</span>
+          <p class="chapter-label mono">Experience &amp; Leadership</p>
+        </header>
+        <h2 id="exp-title" class="display reveal">Leading, building and learning in the real world.</h2>
+
+        <ol class="exp-list">
+          <li class="exp reveal">
+            <div class="exp-when mono">Sep 2026 – Present</div>
+            <div class="exp-body">
+              <h3>ICT Systems &amp; Service Desk Support Intern <span>ZESCO Limited</span></h3>
+              <p class="exp-meta mono">Lusaka, Zambia · On-site</p>
+              <p>First-line ICT support across hardware, software, networking and printing. I configure shared and network printers, support Microsoft 365 and OneDrive users, handle basic Windows administration, and diagnose connectivity and workstation issues, escalating complex problems when needed.</p>
+            </div>
+          </li>
+          <li class="exp reveal">
+            <div class="exp-when mono">2026 / 2027 term</div>
+            <div class="exp-body">
+              <h3>President <span>ICTAZ Copperbelt University Chapter</span></h3>
+              <p class="exp-meta mono">Kitwe, Zambia · Since Aug 2026</p>
+              <p>I lead the chapter's executive and its student ICT initiatives, promoting practical skills in programming, AI, data science and robotics. I connect students with lecturers, technology companies and industry professionals to close the gap between the classroom and industry, and I'm proposing a CBU Students Innovation Challenge.</p>
+            </div>
+          </li>
+          <li class="exp reveal">
+            <div class="exp-when mono">Mar 2026 – Present</div>
+            <div class="exp-body">
+              <h3>Co-Founder &amp; CTO <span>Busaka Enviroworks Limited</span></h3>
+              <p class="exp-meta mono">Copperbelt Province, Zambia</p>
+              <p>I lead the company's technical direction: designing technology for environmental and mining-related challenges, and leading software development, IoT integration, data collection and monitoring systems through prototyping and incubation.</p>
+            </div>
+          </li>
+          <li class="exp reveal">
+            <div class="exp-when mono">2026 – Present</div>
+            <div class="exp-body">
+              <h3>Founder <span>Kalulu Vision</span></h3>
+              <p class="exp-meta mono">AI &amp; software solutions for African challenges</p>
+              <p>An AI and software venture named after the clever hare of Zambian folklore. It focuses on locally relevant technology, including Zambian Sign Language recognition and accessibility tools, and runs a technology education channel.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="exp-more reveal">
+          <h3 class="sub-title">Further roles</h3>
+          <ul>
+            <li><strong>Data Science Intern</strong><span>Tuta Technologies</span></li>
+            <li><strong>System Administrator</strong><span>Evoke Technologies</span></li>
+            <li><strong>President</strong><span>Robotics Club</span></li>
+            <li><strong>Cyber Security Analyst</strong><span>Rydonox · 2024 – 2025</span></li>
+            <li><strong>Cyber Security Analyst</strong><span>Future Interns · 2023 – 2025</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="proj-title">
+      <div class="wrap">
+        <header class="chapter reveal">
+          <span class="chapter-no mono">03</span>
+          <p class="chapter-label mono">Projects &amp; Innovation</p>
+        </header>
+        <div class="proj-head">
+          <h2 id="proj-title" class="display reveal">Work in progress, in production and in the field.</h2>
+          <p class="muted reveal">Each project is labelled with its real status, from early concept to open-source code.</p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button type="button" class="filter is-on" aria-pressed="true" data-filter="all">All</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="ai">AI &amp; Data</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="research">Research</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="software">Software</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="venture">Ventures</button>
+        </div>
+        <p class="sr-only" role="status" aria-live="polite" data-filter-status></p>
+
+        <ul class="proj-grid">
+          <li class="proj proj-lg" data-cat="ai software">
+            <div class="proj-visual vis-educom" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><g class="v-doc"><rect x="70" y="40" width="150" height="180"/><path d="M90 75h90M90 95h110M90 115h70M90 145h100M90 165h80"/></g><g class="v-doc v-doc2"><rect x="190" y="25" width="150" height="180"/><path d="M210 60h90M210 80h110M210 100h60"/><circle cx="300" cy="160" r="26"/><path d="m288 160 8 8 16-16"/></g></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Built · Submitted to HEA Digest 2026</p>
+              <h3>Educom AI</h3>
+              <p>AI-powered education technology that helps Zambian teachers produce curriculum-aligned lesson plans and assessments in minutes.</p>
+              <button class="proj-open" type="button" data-project="educom">Case study<span class="sr-only">: Educom AI</span></button>
+            </div>
+          </li>
+
+          <li class="proj proj-lg" data-cat="research ai">
+            <div class="proj-visual vis-mcdr" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><path class="v-road" d="M-10 190C90 190 120 70 210 70S340 160 410 130"/><path class="v-true" d="M-10 190C90 190 120 70 210 70S340 160 410 130"/><path class="v-drift" d="M40 186C130 160 180 40 270 20S370 -10 410 -20"/><g class="v-pts"><circle cx="60" cy="188" r="4"/><circle cx="135" cy="128" r="4"/><circle cx="210" cy="71" r="4"/><circle cx="285" cy="104" r="4"/><circle cx="355" cy="146" r="4"/></g></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Research prototype · Team KUDJOBA</p>
+              <h3>Map-Constrained Dead Reckoning (MCDR)</h3>
+              <p>Road-constrained vehicle positioning that keeps working during GNSS disruption. Field-tested on surveyed campus roads.</p>
+              <button class="proj-open" type="button" data-project="mcdr">Case study<span class="sr-only">: MCDR</span></button>
+            </div>
+          </li>
+
+          <li class="proj" data-cat="ai research">
+            <div class="proj-visual vis-lang" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><text x="40" y="95">Muli shani</text><text x="150" y="150" class="v-alt">Muli bwanji</text><text x="70" y="200" class="v-alt2">How are you</text><path d="M60 110c40 30 80 20 110 20M200 165c-30 10-70 10-100 20"/></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Concept &amp; design</p>
+              <h3>TalkZed</h3>
+              <p>Offline-first translation between Bemba, Nyanja and English for people with limited or no connectivity.</p>
+              <button class="proj-open" type="button" data-project="talkzed">Case study<span class="sr-only">: TalkZed</span></button>
+            </div>
+          </li>
+
+          <li class="proj" data-cat="research ai">
+            <div class="proj-visual vis-frame" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><g class="v-nodes"><circle cx="80" cy="70" r="6"/><circle cx="80" cy="120" r="6"/><circle cx="80" cy="170" r="6"/><circle cx="200" cy="95" r="6"/><circle cx="200" cy="145" r="6"/><circle cx="320" cy="120" r="8"/></g><path d="M86 70 194 95M86 70 194 145M86 120 194 95M86 120 194 145M86 170 194 95M86 170 194 145M206 95 312 120M206 145 312 120"/><text x="40" y="215">Bemba · Nyanja</text></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Early-stage research</p>
+              <h3>AI Framework for Zambian Indigenous Languages</h3>
+              <p>A research direction toward shared data and models for Bemba and Nyanja language technology.</p>
+              <button class="proj-open" type="button" data-project="langframework">Case study<span class="sr-only">: AI Framework for Zambian Indigenous Languages</span></button>
+            </div>
+          </li>
+
+          <li class="proj" data-cat="ai research">
+            <div class="proj-visual vis-sign" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><g class="v-hand"><circle cx="200" cy="190" r="5"/><circle cx="160" cy="140" r="5"/><circle cx="150" cy="90" r="5"/><circle cx="185" cy="120" r="5"/><circle cx="190" cy="60" r="5"/><circle cx="215" cy="118" r="5"/><circle cx="230" cy="58" r="5"/><circle cx="240" cy="128" r="5"/><circle cx="265" cy="80" r="5"/></g><path d="M200 190 160 140 150 90M200 190 185 120 190 60M200 190 215 118 230 58M200 190 240 128 265 80"/><rect x="110" y="30" width="190" height="185" class="v-box"/></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Planned dissertation</p>
+              <h3>SignBridge</h3>
+              <p>Real-time Zambian Sign Language recognition, starting with a new dataset of Zambian signs.</p>
+              <button class="proj-open" type="button" data-project="signbridge">Case study<span class="sr-only">: SignBridge</span></button>
+            </div>
+          </li>
+
+          <li class="proj proj-lg" data-cat="ai">
+            <div class="proj-visual">
+              <img src="assets/img/evoke-team-2026.webp" alt="Bernard's team holding the Evoke Data Analytics Hackathon winners' cheque" width="1280" height="720" loading="lazy" decoding="async">
+            </div>
+            <div class="proj-body">
+              <p class="status mono">1st Prize · Apr 2026</p>
+              <h3>Evoke Hackathon: Aquaculture Analytics</h3>
+              <p>End-to-end analysis of a Zambian fish-farming dataset that won the Evoke Data Analytics Hackathon.</p>
+              <button class="proj-open" type="button" data-project="evoke">Case study<span class="sr-only">: Evoke Hackathon</span></button>
+            </div>
+          </li>
+
+          <li class="proj proj-lg" data-cat="research">
+            <div class="proj-visual">
+              <img src="assets/img/unipod-unleash-2025.webp" alt="Bernard with teammates at the UniPod UNLEASH Hackathon" width="810" height="1080" loading="lazy" decoding="async">
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Hackathon concept · Jul 2025</p>
+              <h3>Smart Tailings Storage Monitoring</h3>
+              <p>An IoT monitoring and real-time alert concept to make mine tailings facilities safer.</p>
+              <button class="proj-open" type="button" data-project="tsf">Case study<span class="sr-only">: Smart Tailings Storage Monitoring</span></button>
+            </div>
+          </li>
+
+          <li class="proj" data-cat="software">
+            <div class="proj-visual vis-arch" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><rect x="140" y="40" width="120" height="36"/><text x="200" y="63">Gateway</text><path d="M200 76v30M70 106h260M70 106v30M135 106v30M200 106v30M265 106v30M330 106v30"/><g class="v-svc"><rect x="45" y="136" width="50" height="30"/><rect x="110" y="136" width="50" height="30"/><rect x="175" y="136" width="50" height="30"/><rect x="240" y="136" width="50" height="30"/><rect x="305" y="136" width="50" height="30"/></g></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Open source</p>
+              <h3>TechMart</h3>
+              <p>Microservices e-commerce platform built with ASP.NET Core, Blazor and SQL Server.</p>
+              <button class="proj-open" type="button" data-project="techmart">Case study<span class="sr-only">: TechMart</span></button>
+            </div>
+          </li>
+
+          <li class="proj" data-cat="software">
+            <div class="proj-visual proj-visual-light">
+              <img src="assets/img/project-xero1.webp" alt="Screenshot of the Xero1 number base converter" width="607" height="491" loading="lazy" decoding="async">
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Open source</p>
+              <h3>Xero1</h3>
+              <p>A Windows desktop converter for binary, octal, decimal and hexadecimal that updates as you type.</p>
+              <button class="proj-open" type="button" data-project="xero1">Case study<span class="sr-only">: Xero1</span></button>
+            </div>
+          </li>
+
+          <li class="proj" data-cat="software">
+            <div class="proj-visual vis-tasks" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><g class="v-rows"><rect x="90" y="50" width="220" height="34"/><rect x="90" y="100" width="220" height="34"/><rect x="90" y="150" width="220" height="34"/></g><path d="m104 67 6 6 12-12M104 117l6 6 12-12" class="v-check"/><path d="M140 67h120M140 117h100M140 167h130"/></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Open source</p>
+              <h3>Task Manager</h3>
+              <p>A task management web app built with ASP.NET Core and Blazor on .NET 9.</p>
+              <button class="proj-open" type="button" data-project="taskmanager">Case study<span class="sr-only">: Task Manager</span></button>
+            </div>
+          </li>
+
+          <li class="proj proj-lg" data-cat="venture ai">
+            <div class="proj-visual vis-kalulu" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><circle cx="200" cy="120" r="70"/><circle cx="200" cy="120" r="40"/><circle cx="200" cy="120" r="10" class="v-fill"/><path d="M60 120h70M270 120h70"/></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Founded 2026</p>
+              <h3>Kalulu Vision</h3>
+              <p>My AI and software venture building solutions for African challenges, plus technology education content.</p>
+              <button class="proj-open" type="button" data-project="kalulu">Case study<span class="sr-only">: Kalulu Vision</span></button>
+            </div>
+          </li>
+
+          <li class="proj proj-lg" data-cat="venture">
+            <div class="proj-visual vis-env" aria-hidden="true">
+              <svg viewBox="0 0 400 240"><path d="M0 190 90 120l60 40 80-90 70 60 100-50v160H0Z" class="v-terrain"/><g class="v-sensors"><circle cx="90" cy="120" r="6"/><circle cx="230" cy="70" r="6"/><circle cx="300" cy="130" r="6"/></g><path d="M90 120V60M230 70V30M300 130V80" class="v-ant"/></svg>
+            </div>
+            <div class="proj-body">
+              <p class="status mono">Venture · Incubation stage</p>
+              <h3>Busaka Enviroworks</h3>
+              <p>Technology for environmental and mining-related challenges, from IoT monitoring to data systems.</p>
+              <button class="proj-open" type="button" data-project="busaka">Case study<span class="sr-only">: Busaka Enviroworks</span></button>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- Project detail dialog (filled from the data below) -->
+    <dialog class="modal" id="project-modal" aria-labelledby="pm-title">
+      <div class="modal-inner">
+        <div class="modal-head">
+          <div>
+            <p class="status mono" data-pm="status"></p>
+            <h3 id="pm-title" data-pm="title">Project details</h3>
+          </div>
+          <button class="close-btn" type="button" aria-label="Close case study" data-modal-close>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>Problem</h4><p data-pm="problem"></p>
+          <h4>Solution</h4><p data-pm="solution"></p>
+          <h4>My contribution</h4><p data-pm="contribution"></p>
+          <div data-pm-wrap="tech"><h4 data-pm="techLabel">Technologies</h4><ul class="chips" data-pm="tech"></ul></div>
+          <div class="modal-links" data-pm="links"></div>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="application/json" id="project-data">
+    {
+      "educom": {
+        "title": "Educom AI", "status": "Built · Submitted to the HEA Research & Innovation Digest 2026",
+        "problem": "Teachers in Zambia spend hours preparing lesson plans and assessments that must align with the competency-based curriculum, often with limited resources.",
+        "solution": "An AI-powered platform that generates curriculum-aligned lesson plans, quizzes, exams and marking schemes, exports them to PDF, and answers questions with retrieval over curriculum documents. It also includes classroom, resource and analytics tools for teachers.",
+        "contribution": "Designed and built the platform end to end: the Next.js web app, the Python AI backend, the curriculum retrieval pipeline and the deployment setup.",
+        "tech": ["Next.js 15", "TypeScript", "Python FastAPI", "ChromaDB (RAG)", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS"],
+        "links": [{"label": "View source on GitHub", "href": "https://github.com/dev-lusale/Educom-AI"}]
+      },
+      "mcdr": {
+        "title": "Map-Constrained Dead Reckoning (MCDR)", "status": "Research prototype · International Transport Project Contest, Moscow 2026",
+        "problem": "Intelligent transport systems depend on satellite positioning (GNSS). When it is blocked, jammed or distorted, vehicles vanish or jump on dispatch maps, and operators lose track of their fleets.",
+        "solution": "A backup positioning layer that combines odometry and heading with a particle filter constrained to surveyed road geometry. In a test on Copperbelt University's Riverside Campus roads it held a 2.55 m error (RMSE) over about 850 m, against 549.92 m for dead reckoning alone, with 88% of estimates inside the lane half-width.",
+        "contribution": "Member of Team KUDJOBA with Bwembya Benhard and Musonda Mwape. I worked on problem research, solution formulation and the competition presentations, and I'm now developing the prototype further.",
+        "techLabel": "Methods & tools",
+        "tech": ["Particle filter", "Dead reckoning", "LandXML road geometry", "RTK GNSS survey data", "Python / Jupyter"],
+        "links": []
+      },
+      "talkzed": {
+        "title": "TalkZed", "status": "Concept & design",
+        "problem": "Millions of Zambians speak Bemba or Nyanja, but few digital tools support these languages, and the ones that do usually need a reliable internet connection.",
+        "solution": "A mobile translation app for Bemba, Nyanja and English designed to work offline on everyday phones.",
+        "contribution": "Product concept and technical design: the architecture, REST API endpoints, database schema and mobile implementation plan.",
+        "techLabel": "Planned stack",
+        "tech": ["React Native", "REST API", "PostgreSQL"],
+        "links": []
+      },
+      "langframework": {
+        "title": "AI Framework for Zambian Indigenous Languages", "status": "Early-stage research",
+        "problem": "Bemba and Nyanja have very little digital text, speech data or tooling, so each new language project starts from nothing.",
+        "solution": "A research direction toward shared datasets, evaluation methods and reusable models that future Bemba and Nyanja tools, such as TalkZed, can build on.",
+        "contribution": "Defining the research questions and the data needed, as part of my long-term focus on African-language technology.",
+        "tech": [],
+        "links": []
+      },
+      "signbridge": {
+        "title": "SignBridge", "status": "Planned dissertation",
+        "problem": "Deaf people who use Zambian Sign Language have almost no technology that understands their language, and no public dataset of Zambian signs exists to build it.",
+        "solution": "A real-time sign recognition system using hand-landmark tracking. The core research contribution is a new dataset of roughly 30–50 Zambian signs recorded from 5–10 signers.",
+        "contribution": "Leading the project as my planned final-year dissertation: dataset design, data collection and the recognition model.",
+        "techLabel": "Planned tools",
+        "tech": ["Python", "OpenCV", "MediaPipe"],
+        "links": []
+      },
+      "evoke": {
+        "title": "Evoke Hackathon: Aquaculture Analytics", "status": "1st Prize · Evoke Data Analytics Hackathon 2026",
+        "problem": "Fish farmers and planners need evidence about what drives productivity, but the data is rarely analysed in a form decision-makers can use.",
+        "solution": "A complete analysis of a 1,000-record Zambian fish-farming dataset: cleaning, ten visualisations, statistical testing and a written report with recommendations. Presented at American Spaces, Copperbelt University, where our team won first prize.",
+        "contribution": "Worked with my team on the data analysis, visualisations and report.",
+        "techLabel": "Methods",
+        "tech": ["Data cleaning", "Exploratory analysis", "Statistical testing", "Data visualisation"],
+        "links": []
+      },
+      "tsf": {
+        "title": "Smart Tailings Storage Monitoring", "status": "Hackathon concept · UniPod UNLEASH Hackathon, July 2025",
+        "problem": "Tailings storage facilities at mines can fail with devastating environmental and human consequences, and early warning signs are easy to miss.",
+        "solution": "A monitoring concept that uses IoT sensors and real-time alerts to track facility conditions and warn operators early, developed at the Mukuba UniPod hackathon on pollution and the future of mining.",
+        "contribution": "Developed the concept with my hackathon team.",
+        "techLabel": "Concepts",
+        "tech": ["IoT sensing", "Real-time alerts"],
+        "links": []
+      },
+      "kalulu": {
+        "title": "Kalulu Vision", "status": "Founded 2026",
+        "problem": "Many AI products assume fast internet, modern devices and English-only users, which leaves out much of Africa.",
+        "solution": "A venture building AI and software for African conditions, including Zambian Sign Language recognition and accessibility tools, and sharing practical technology education.",
+        "contribution": "Founder: setting direction, building products and creating the education content.",
+        "tech": [],
+        "links": []
+      },
+      "busaka": {
+        "title": "Busaka Enviroworks Limited", "status": "Venture · Incubation stage",
+        "problem": "Environmental and mining-related risks in the Copperbelt need better monitoring and data.",
+        "solution": "Technology-driven solutions for environmental and mining challenges, including IoT integration, data collection and monitoring systems.",
+        "contribution": "Co-founder and CTO: I lead technical direction, software development, prototyping and product development.",
+        "techLabel": "Focus areas",
+        "tech": ["IoT integration", "Monitoring systems", "Data collection"],
+        "links": []
+      },
+      "techmart": {
+        "title": "TechMart", "status": "Open source",
+        "problem": "Online stores need dependable ordering, accurate stock and order tracking in one system.",
+        "solution": "An e-commerce platform split into identity, inventory, order, payment and notification services behind an API gateway, with a customer web app and an admin dashboard.",
+        "contribution": "Designed and developed the platform.",
+        "tech": ["ASP.NET Core 9", "Blazor", "SQL Server", "Ocelot API gateway", "SignalR", "Docker"],
+        "links": [{"label": "View source on GitHub", "href": "https://github.com/dev-lusale/TechMart"}]
+      },
+      "xero1": {
+        "title": "Xero1", "status": "Open source",
+        "problem": "Converting values between number systems by hand is slow and error-prone for students and developers.",
+        "solution": "A desktop converter that updates binary, octal, decimal and hexadecimal fields in real time, with optional prefixes and selectable bit sizes.",
+        "contribution": "Designed and developed the application.",
+        "tech": ["C#", ".NET 9", "Windows Forms"],
+        "links": [{"label": "View source on GitHub", "href": "https://github.com/dev-lusale/Xero1"}]
+      },
+      "taskmanager": {
+        "title": "Task Manager", "status": "Open source",
+        "problem": "Small teams and individuals need a simple way to create, organise and track tasks.",
+        "solution": "A web-based task management app with task creation and tracking.",
+        "contribution": "Designed and developed the application.",
+        "tech": ["C#", "ASP.NET Core (.NET 9)", "Blazor"],
+        "links": [{"label": "View source on GitHub", "href": "https://github.com/dev-lusale/task-manager"}]
+      }
+    }
+    </script>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section class="section section-alt" id="achievements" aria-labelledby="ach-title">
+      <div class="wrap">
+        <header class="chapter reveal">
+          <span class="chapter-no mono">04</span>
+          <p class="chapter-label mono">Achievements &amp; Recognition</p>
+        </header>
+        <h2 id="ach-title" class="display reveal">Moments that moved the work forward.</h2>
+
+        <div class="ach-grid">
+          <article class="ach ach-photo reveal">
+            <div class="ach-img mask-img">
+              <img src="assets/img/evoke-prize-2026.webp" alt="Bernard holding the Evoke Data Analytics Hackathon prize cheque" width="607" height="1080" loading="lazy" decoding="async">
+            </div>
+            <div class="ach-body">
+              <p class="mono ach-when">April 2026</p>
+              <h3>First Prize, Evoke Data Analytics Hackathon</h3>
+              <p class="muted">Won with my team at American Spaces, Copperbelt University, for our analysis of real-world datasets.</p>
+            </div>
+          </article>
+
+          <article class="ach ach-feature reveal">
+            <div class="ach-art" aria-hidden="true">
+              <svg viewBox="0 0 400 220"><path d="M20 160C120 160 140 60 230 60S360 130 390 110"/><circle cx="20" cy="160" r="5"/><circle cx="390" cy="110" r="5"/><text x="20" y="195">Kitwe</text><text x="335" y="95">Moscow</text></svg>
+            </div>
+            <p class="mono ach-when">October 2026 · Moscow, Russia</p>
+            <h3>International Transport Project Contest</h3>
+            <p class="muted">Represented Copperbelt University and Zambia with Team KUDJOBA at the Russian University of Transport, presenting our MCDR positioning project. I was one of three students selected by the CBU Directorate of Research.</p>
+          </article>
+
+          <article class="ach ach-feature reveal">
+            <div class="ach-num" aria-hidden="true">100</div>
+            <p class="mono ach-when">2026</p>
+            <h3>ZICTA 100 Innovators</h3>
+            <p class="muted">Recognised among the 100 Innovators 2026 by the Zambia Information and Communications Technology Authority.</p>
+          </article>
+        </div>
+
+        <ul class="ach-list">
+          <li class="reveal"><span class="mono">Speaker</span><strong>.NET Conf Zambia</strong></li>
+          <li class="reveal"><span class="mono">Invited speaker · 2026</span><strong>DigiSkills Lab Africa Bootcamp</strong></li>
+          <li class="reveal"><span class="mono">Submission · 2026</span><strong>Educom AI, HEA Research &amp; Innovation Digest</strong></li>
+          <li class="reveal"><span class="mono">Participant · Apr 2026</span><strong>Kopala 100, Garden Court Kitwe</strong></li>
+          <li class="reveal"><span class="mono">Participant · Mar 2026</span><strong>BongoHive Ignite Program</strong></li>
+          <li class="reveal"><span class="mono">Participant · Dec 2025</span><strong>2nd National Research &amp; Innovation Symposium</strong></li>
+          <li class="reveal"><span class="mono">Participant · Jul 2025</span><strong>UniPod UNLEASH Hackathon, Mukuba UniPod</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section class="section" id="research" aria-labelledby="res-title">
+      <div class="wrap">
+        <header class="chapter reveal">
+          <span class="chapter-no mono">05</span>
+          <p class="chapter-label mono">Research &amp; Interests</p>
+        </header>
+        <div class="res-head">
+          <h2 id="res-title" class="display reveal">The questions I want to spend my career on.</h2>
+          <blockquote class="pull reveal"><p>Can useful AI run where the internet doesn't, and speak the languages people actually use?</p></blockquote>
+        </div>
+
+        <ol class="res-list">
+          <li class="reveal">
+            <h3>Natural language processing for African languages</h3>
+            <p>How can translation and language tools for Bemba and Nyanja work offline on everyday phones, with very little training data?</p>
+            <p class="res-link mono">Connected work: TalkZed · Indigenous Languages Framework</p>
+          </li>
+          <li class="reveal">
+            <h3>Computer vision for accessibility</h3>
+            <p>What would it take to recognise Zambian Sign Language in real time, and how do you build the first dataset responsibly?</p>
+            <p class="res-link mono">Connected work: SignBridge</p>
+          </li>
+          <li class="reveal">
+            <h3>Intelligent systems under uncertainty</h3>
+            <p>How far can probabilistic methods and prior knowledge, such as road maps, carry a system when its main sensors fail?</p>
+            <p class="res-link mono">Connected work: MCDR</p>
+          </li>
+          <li class="reveal">
+            <h3>Big data and analytics for public value</h3>
+            <p>How can large public datasets, from procurement records to agriculture and youth employment data, become evidence decision-makers actually use?</p>
+            <p class="res-link mono">Connected work: Evoke Hackathon · public-data analyses</p>
+          </li>
+          <li class="reveal">
+            <h3>AI and machine learning in education</h3>
+            <p>Can retrieval-grounded AI reduce teachers' preparation load without drifting away from the national curriculum?</p>
+            <p class="res-link mono">Connected work: Educom AI</p>
+          </li>
+          <li class="reveal">
+            <h3>Applied research and innovation</h3>
+            <p>How do you turn a research prototype into something an institution, a company or a community can adopt?</p>
+            <p class="res-link mono">Connected work: Kalulu Vision · Busaka Enviroworks</p>
+          </li>
+        </ol>
+
+        <!-- Skills -->
+        <div class="skills" id="skills">
+          <h3 class="sub-title reveal">Technical skills</h3>
+          <div class="skill-grid">
+            <div class="skill reveal"><h4>Programming</h4><ul><li>Python</li><li>Java</li><li>C#</li><li>JavaScript</li><li>TypeScript</li><li>Dart</li></ul></div>
+            <div class="skill reveal"><h4>AI &amp; Machine Learning</h4><ul><li>TensorFlow</li><li>PyTorch</li><li>OpenCV</li><li>MediaPipe</li><li>Retrieval-augmented generation</li><li>ChromaDB</li></ul></div>
+            <div class="skill reveal"><h4>Data Science &amp; Analytics</h4><ul><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Jupyter</li><li>Statistical testing</li><li>Particle filtering</li></ul></div>
+            <div class="skill reveal"><h4>Software Development</h4><ul><li>ASP.NET Core</li><li>Blazor</li><li>Windows Forms</li><li>FastAPI</li><li>Node.js</li><li>Express</li></ul></div>
+            <div class="skill reveal"><h4>Web &amp; Mobile</h4><ul><li>HTML &amp; CSS</li><li>Next.js</li><li>Tailwind CSS</li><li>React Native</li><li>Flutter</li><li>.NET MAUI</li></ul></div>
+            <div class="skill reveal"><h4>Databases &amp; Cloud</h4><ul><li>PostgreSQL</li><li>MySQL</li><li>SQL Server</li><li>MongoDB</li><li>Firebase</li><li>Prisma</li><li>AWS</li><li>Vercel</li></ul></div>
+            <div class="skill reveal"><h4>Development Tools</h4><ul><li>Git &amp; GitHub</li><li>Docker</li><li>Linux</li><li>VS Code</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="section section-alt" id="journey" aria-labelledby="jr-title">
+      <div class="wrap">
+        <header class="chapter reveal">
+          <span class="chapter-no mono">06</span>
+          <p class="chapter-label mono">Personal Journey</p>
+        </header>
+        <h2 id="jr-title" class="display reveal">From Choma to Kitwe to Moscow, and onward.</h2>
+
+        <nav class="jr-jump reveal" aria-label="Jump to year">
+          <a href="#jr-2023">2023</a><a href="#jr-2025">2025</a><a href="#jr-2026">2026</a><a href="#jr-next">Next</a>
+        </nav>
+
+        <ol class="timeline" data-timeline>
+          <li class="tl-line" aria-hidden="true"><span data-timeline-fill></span></li>
+          <li class="tl" id="jr-2023">
+            <p class="tl-when mono">Before 2023</p>
+            <h3>Choma Secondary School</h3>
+            <p>Secondary School Certificate, and the first real taste of maths and computing.</p>
+          </li>
+          <li class="tl">
+            <p class="tl-when mono">2023</p>
+            <h3>Copperbelt University</h3>
+            <p>Began a BSc in Computer Science at the Riverside Campus in Kitwe.</p>
+          </li>
+          <li class="tl" id="jr-2025">
+            <p class="tl-when mono">July 2025</p>
+            <h3>UniPod UNLEASH Hackathon</h3>
+            <p>Designed an IoT tailings-facility monitoring concept on pollution and the future of mining.</p>
+          </li>
+          <li class="tl tl-photo">
+            <p class="tl-when mono">December 2025</p>
+            <h3>National Research &amp; Innovation Symposium</h3>
+            <p>Took part in the 2nd National Research and Innovation Symposium, hosted by the Ministry of Education and Copperbelt University.</p>
+            <img src="assets/img/symposium-2025.webp" alt="Bernard at the Second National Research and Innovation Symposium 2025 banner" width="810" height="1080" loading="lazy" decoding="async">
+          </li>
+          <li class="tl" id="jr-2026">
+            <p class="tl-when mono">March 2026</p>
+            <h3>BongoHive Ignite &amp; Busaka Enviroworks</h3>
+            <p>Joined BongoHive's Ignite startup programme and co-founded Busaka Enviroworks as CTO.</p>
+          </li>
+          <li class="tl tl-photo">
+            <p class="tl-when mono">April 2026</p>
+            <h3>Evoke win &amp; Kopala 100</h3>
+            <p>Won first prize at the Evoke Data Analytics Hackathon and joined Kopala 100 in Kitwe.</p>
+            <img src="assets/img/kopala-100-2026.webp" alt="Bernard at the Kopala 100 2026 event" width="720" height="1280" loading="lazy" decoding="async">
+          </li>
+          <li class="tl">
+            <p class="tl-when mono">2026</p>
+            <h3>Kalulu Vision &amp; ZICTA 100 Innovators</h3>
+            <p>Founded Kalulu Vision and was recognised among ZICTA's 100 Innovators.</p>
+          </li>
+          <li class="tl">
+            <p class="tl-when mono">June – July 2026</p>
+            <h3>MCDR field work</h3>
+            <p>Surveyed campus roads with network RTK equipment and validated the MCDR prototype for the contest submission.</p>
+          </li>
+          <li class="tl">
+            <p class="tl-when mono">August – September 2026</p>
+            <h3>Leadership and industry</h3>
+            <p>Became President of the ICTAZ CBU Chapter and started as an ICT intern at ZESCO Limited.</p>
+          </li>
+          <li class="tl tl-key">
+            <p class="tl-when mono">October 2026</p>
+            <h3>Moscow, Russia</h3>
+            <p>Represented Zambia at the International Transport Project Contest at the Russian University of Transport with Team KUDJOBA.</p>
+          </li>
+          <li class="tl tl-next" id="jr-next">
+            <p class="tl-when mono">Next</p>
+            <h3>AI research</h3>
+            <p>A final-year dissertation on Zambian Sign Language recognition, and a longer path into AI research on African languages and accessibility.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="ct-title">
+      <div class="wrap">
+        <header class="chapter reveal">
+          <span class="chapter-no mono">07</span>
+          <p class="chapter-label mono">Contact</p>
+        </header>
+        <div class="ct-grid">
+          <div class="ct-copy">
+            <h2 id="ct-title" class="display reveal">Let's build something that matters.</h2>
+            <p class="lede reveal">I'm open to collaborations, research opportunities, internships and roles in AI, data and software engineering.</p>
+            <ul class="ct-links reveal">
+              <li><a href="mailto:bernardlusale20@gmail.com"><span class="mono">Email</span>bernardlusale20@gmail.com</a></li>
+              <li><a href="https://www.linkedin.com/in/bernard-lusale" target="_blank" rel="noopener"><span class="mono">LinkedIn</span>in/bernard-lusale<span class="sr-only"> (opens in a new tab)</span></a></li>
+              <li><a href="https://github.com/dev-lusale" target="_blank" rel="noopener"><span class="mono">GitHub</span>github.com/dev-lusale<span class="sr-only"> (opens in a new tab)</span></a></li>
+            </ul>
+            <p class="muted reveal">Based in Kitwe, Zambia · Open to remote and on-site work</p>
+          </div>
+
+          <form class="ct-form reveal" id="contact-form" novalidate>
+            <div class="form-summary" id="form-summary" tabindex="-1" hidden></div>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="f-name-err">
+              <p class="field-err" id="f-name-err"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Your email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="160" aria-describedby="f-email-err">
+              <p class="field-err" id="f-email-err"></p>
+            </div>
+            <div class="field">
+              <label for="f-topic">What's it about? <span class="opt">(optional)</span></label>
+              <select id="f-topic" name="topic">
+                <option value="">Choose a topic</option>
+                <option>Collaboration</option>
+                <option>Research opportunity</option>
+                <option>Internship or job</option>
+                <option>Speaking or event</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" name="message" rows="5" required minlength="10" maxlength="4000" aria-describedby="f-msg-err"></textarea>
+              <p class="field-err" id="f-msg-err"></p>
+            </div>
+            <input class="hp" name="_gotcha" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn-solid btn-block" type="submit" data-submit><span data-submit-label>Send message</span><span class="spinner" aria-hidden="true"></span></button>
+            <p class="form-note muted" data-form-note>This opens your email app with the message ready to send.</p>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer-top">
+      <img class="footer-logo" src="assets/img/logo-192.webp" alt="Bernard Lusale logo" width="120" height="120" loading="lazy">
+      <p class="footer-slogan">Building Intelligent Solutions.<br><em>Creating Meaningful Impact.</em></p>
+    </div>
+    <div class="wrap footer-bottom">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-social">
+        <li><a href="mailto:bernardlusale20@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/bernard-lusale" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li><a href="https://github.com/dev-lusale" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+      </ul>
+      <p class="mono">© <span data-year>2026</span> Bernard Lusale · Kitwe, Zambia</p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top" data-to-top hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

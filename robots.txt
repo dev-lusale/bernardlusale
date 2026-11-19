@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dev-lusale.github.io/bernardlusale/sitemap.xml
